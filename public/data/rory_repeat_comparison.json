@@ -1,0 +1,48 @@
+{
+  "metricComparison": [
+    {
+      "key": "driving_dist",
+      "label": "Driving Distance",
+      "value2025": 322.5,
+      "value2026": 330.4,
+      "difference": 7.9,
+      "directionality": "higher_better"
+    }
+  ],
+  "roundComparison": [
+    {
+      "round": 1,
+      "value2025": 70,
+      "value2026": 67,
+      "difference": 0
+    },
+    {
+      "round": 2,
+      "value2025": 66,
+      "value2026": 65,
+      "difference": 0
+    },
+    {
+      "round": 3,
+      "value2025": 71,
+      "value2026": 73,
+      "difference": 0
+    },
+    {
+      "round": 4,
+      "value2025": 66,
+      "value2026": 71,
+      "difference": 0
+    }
+  ],
+  "takeaways": {
+    "where2026ImprovedMost": "Iron play to the green.",
+    "where2026RegressedMost": "Putting inside 5 feet.",
+    "how2026HeldUpUnderPressure": "Zero bogeys over the final 27 holes.",
+    "overallRepeatVerdict": "A surgical defense built on iron precision."
+  },
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.066581+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}

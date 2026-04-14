@@ -1,0 +1,48 @@
+{
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "metrics": {
+    "driving_dist": [
+      {
+        "year": 2021,
+        "playerName": "Hideki Matsuyama",
+        "value": 310.5
+      },
+      {
+        "year": 2022,
+        "playerName": "Scottie Scheffler",
+        "value": 312.8
+      },
+      {
+        "year": 2023,
+        "playerName": "Jon Rahm",
+        "value": 315.1
+      },
+      {
+        "year": 2024,
+        "playerName": "Scottie Scheffler",
+        "value": 314.9
+      },
+      {
+        "year": 2025,
+        "playerName": "Rory McIlroy",
+        "value": 322.4
+      },
+      {
+        "year": 2026,
+        "playerName": "Rory McIlroy",
+        "value": 330.4
+      }
+    ]
+  },
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.067276+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}

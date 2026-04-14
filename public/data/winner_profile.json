@@ -1,0 +1,41 @@
+{
+  "player": {
+    "slug": "rory-mcilroy",
+    "displayName": "Rory McIlroy",
+    "scoreToPar": -12,
+    "rounds": [
+      67,
+      65,
+      73,
+      71
+    ]
+  },
+  "metrics": [
+    {
+      "key": "driving_dist",
+      "label": "Driving Distance",
+      "winnerValue": 330.4,
+      "fieldValue": 315.2,
+      "top10Value": 322.1,
+      "recentChampionMedian": 318.5,
+      "deltaVsField": 15.2,
+      "deltaVsTop10": 8.3,
+      "deltaVsRecentChampions": 11.9,
+      "directionality": "higher_better"
+    }
+  ],
+  "verdicts": {
+    "primarySeparator": "Iron play to the green.",
+    "secondarySupport": "Putting inside 10 feet.",
+    "weaknessOvercome": "Driving accuracy."
+  },
+  "separatorRanking": [
+    "Iron Play",
+    "Driving Distance",
+    "Putting"
+  ],
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.064802+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}

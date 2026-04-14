@@ -1,0 +1,19 @@
+{
+  "playerSlug": "rory-mcilroy",
+  "displayName": "Rory McIlroy",
+  "countryCode": "NIR",
+  "scoreToPar": -12,
+  "finalPosition": 1,
+  "totalStrokes": 276,
+  "rounds": [
+    67,
+    65,
+    73,
+    71
+  ],
+  "keySummaryLine": "Rory McIlroy claims his second consecutive green jacket, holding off Scottie Scheffler with a masterful 12-under par performance.",
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.056537+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}

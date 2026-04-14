@@ -1,0 +1,27 @@
+{
+  "projectScope": "Static analysis of 2026 Masters.",
+  "dataSources": [
+    {
+      "name": "ESPN",
+      "role": "Leaderboard"
+    }
+  ],
+  "metricDefinitions": [
+    {
+      "key": "driving_dist",
+      "label": "Driving Distance",
+      "definition": "Average yards off the tee on measured holes."
+    }
+  ],
+  "limitations": [
+    "public data does not fully reconstruct club choice or shot shape",
+    "this is directional evidence, not causal proof"
+  ],
+  "editorialGuardrails": [
+    "No hallucinating hole-by-hole data where unavailable."
+  ],
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.068372+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}

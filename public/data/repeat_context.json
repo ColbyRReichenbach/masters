@@ -1,0 +1,36 @@
+{
+  "intro": "McIlroy is the fourth player in history to win back-to-back Masters.",
+  "repeatSetSize": 4,
+  "isRoryInRepeatSet": true,
+  "repeatChampions": [
+    {
+      "playerName": "Jack Nicklaus",
+      "firstYear": 1965,
+      "secondYear": 1966,
+      "displayLabel": "1965-66"
+    },
+    {
+      "playerName": "Nick Faldo",
+      "firstYear": 1989,
+      "secondYear": 1990,
+      "displayLabel": "1989-90"
+    },
+    {
+      "playerName": "Tiger Woods",
+      "firstYear": 2001,
+      "secondYear": 2002,
+      "displayLabel": "2001-02"
+    },
+    {
+      "playerName": "Rory McIlroy",
+      "firstYear": 2025,
+      "secondYear": 2026,
+      "displayLabel": "2025-26"
+    }
+  ],
+  "rarityText": "One of only four players to successfully defend a Masters title.",
+  "artifactVersion": "0.1.0",
+  "generatedAt": "2026-04-14T17:04:20.065636+00:00",
+  "sourceSnapshotVersion": "1.0",
+  "schemaVersion": "1.0"
+}
