@@ -4,14 +4,9 @@
   "venueName": "Augusta National Golf Club",
   "courseYardage": 7565,
   "par": 72,
-  "fieldSize": 91,
-  "cutLine": 1,
   "winnerName": "Rory McIlroy",
   "winnerSlug": "rory-mcilroy",
   "winningScoreToPar": -12,
-  "venueLogoUrl": "https://example.com/logo.png",
-  "artifactVersion": "0.1.0",
-  "generatedAt": "2026-04-14T17:04:20.054760+00:00",
-  "sourceSnapshotVersion": "1.0",
-  "schemaVersion": "1.0"
+  "fieldSize": 91,
+  "generatedAt": "2026-04-15T02:29:45.199Z"
 }

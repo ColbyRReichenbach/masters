@@ -1,7 +1,7 @@
 {
   "playerSlug": "rory-mcilroy",
   "displayName": "Rory McIlroy",
-  "countryCode": "NIR",
+  "countryCode": "",
   "scoreToPar": -12,
   "finalPosition": 1,
   "totalStrokes": 276,
@@ -11,5 +11,5 @@
     73,
     71
   ],
-  "keySummaryLine": "Overcame a final-round double-bogey to win by one stroke, becoming only the fourth player to successfully defend a Masters title."
+  "keySummaryLine": "Rory McIlroy finished -12 with rounds of 67-65-73-71."
 }
