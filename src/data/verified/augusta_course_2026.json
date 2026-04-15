@@ -1,0 +1,115 @@
+{
+  "courseName": "Augusta National Golf Club",
+  "totalPar": 72,
+  "totalYardage": 7565,
+  "holes": [
+    {
+      "holeNumber": 1,
+      "holeName": "Tea Olive",
+      "par": 4,
+      "yardage": 445
+    },
+    {
+      "holeNumber": 2,
+      "holeName": "Pink Dogwood",
+      "par": 5,
+      "yardage": 585
+    },
+    {
+      "holeNumber": 3,
+      "holeName": "Flowering Peach",
+      "par": 4,
+      "yardage": 350
+    },
+    {
+      "holeNumber": 4,
+      "holeName": "Flowering Crab Apple",
+      "par": 3,
+      "yardage": 240
+    },
+    {
+      "holeNumber": 5,
+      "holeName": "Magnolia",
+      "par": 4,
+      "yardage": 495
+    },
+    {
+      "holeNumber": 6,
+      "holeName": "Juniper",
+      "par": 3,
+      "yardage": 180
+    },
+    {
+      "holeNumber": 7,
+      "holeName": "Pampas",
+      "par": 4,
+      "yardage": 450
+    },
+    {
+      "holeNumber": 8,
+      "holeName": "Yellow Jasmine",
+      "par": 5,
+      "yardage": 570
+    },
+    {
+      "holeNumber": 9,
+      "holeName": "Carolina Cherry",
+      "par": 4,
+      "yardage": 460
+    },
+    {
+      "holeNumber": 10,
+      "holeName": "Camellia",
+      "par": 4,
+      "yardage": 495
+    },
+    {
+      "holeNumber": 11,
+      "holeName": "White Dogwood",
+      "par": 4,
+      "yardage": 520
+    },
+    {
+      "holeNumber": 12,
+      "holeName": "Golden Bell",
+      "par": 3,
+      "yardage": 155
+    },
+    {
+      "holeNumber": 13,
+      "holeName": "Azalea",
+      "par": 5,
+      "yardage": 545
+    },
+    {
+      "holeNumber": 14,
+      "holeName": "Chinese Fir",
+      "par": 4,
+      "yardage": 440
+    },
+    {
+      "holeNumber": 15,
+      "holeName": "Firethorn",
+      "par": 5,
+      "yardage": 550
+    },
+    {
+      "holeNumber": 16,
+      "holeName": "Redbud",
+      "par": 3,
+      "yardage": 170
+    },
+    {
+      "holeNumber": 17,
+      "holeName": "Nandina",
+      "par": 4,
+      "yardage": 450
+    },
+    {
+      "holeNumber": 18,
+      "holeName": "Holly",
+      "par": 4,
+      "yardage": 465
+    }
+  ]
+}
