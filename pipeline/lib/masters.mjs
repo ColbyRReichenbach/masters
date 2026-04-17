@@ -1,4 +1,3 @@
-cat > ./ pipeline / lib / masters.mjs << 'EOF'
 import { assert } from "./validate.mjs";
 
 const FALLBACK_HOLES_2026 = [
@@ -106,4 +105,3 @@ export function parseMastersHoleStats(pageData) {
   assert(fallback.reduce((sum, h) => sum + h.par, 0) === 72, "Fallback Augusta par does not total 72.");
   return fallback;
 }
-EOF

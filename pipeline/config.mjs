@@ -4,6 +4,7 @@ export default {
     name: "Masters Tournament",
     venueName: "Augusta National Golf Club",
     par: 72,
+    tournamentId: "401811941",
     // Use the ESPN tournamentId URL for a stable final leaderboard page.
     leaderboardUrl: "https://www.espn.com/golf/leaderboard/_/tournamentId/401811941",
     // Masters stats page provides hole yardage/par; hole names are optional and may be missing.
@@ -32,6 +33,9 @@ export default {
       "winner.json",
       "winner_scorecard.json",
       "winner_profile.json",
+      "all_player_scorecards.json",
+      "all_player_tournament_stats.json",
+      "course_hole_stats.json",
       "methodology.json"
     ]
   }

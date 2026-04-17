@@ -118,3 +118,29 @@
 .recharts-tooltip-label {
   @apply !font-serif !font-bold !text-masters-yellow !mb-2 !text-lg;
 }
+
+.recharts-wrapper,
+.recharts-wrapper *,
+.recharts-surface,
+.recharts-surface *,
+.recharts-layer,
+.recharts-layer * {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.recharts-wrapper:focus,
+.recharts-wrapper *:focus,
+.recharts-wrapper:focus-visible,
+.recharts-wrapper *:focus-visible,
+.recharts-surface:focus,
+.recharts-surface *:focus,
+.recharts-surface:focus-visible,
+.recharts-surface *:focus-visible,
+.recharts-layer:focus,
+.recharts-layer *:focus,
+.recharts-layer:focus-visible,
+.recharts-layer *:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}

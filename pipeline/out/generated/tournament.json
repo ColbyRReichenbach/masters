@@ -2,11 +2,11 @@
   "year": 2026,
   "name": "Masters Tournament",
   "venueName": "Augusta National Golf Club",
-  "courseYardage": 7565,
+  "courseYardage": null,
   "par": 72,
   "winnerName": "Rory McIlroy",
   "winnerSlug": "rory-mcilroy",
   "winningScoreToPar": -12,
   "fieldSize": 91,
-  "generatedAt": "2026-04-15T02:29:45.199Z"
+  "generatedAt": "2026-04-17T01:03:06.851Z"
 }

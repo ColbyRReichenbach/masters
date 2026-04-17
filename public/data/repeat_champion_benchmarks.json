@@ -1,0 +1,111 @@
+[
+  {
+    "playerName": "Jack Nicklaus",
+    "playerSlug": "jack-nicklaus",
+    "firstYear": 1965,
+    "repeatYear": 1966,
+    "displayLabel": "1965-66",
+    "firstWin": {
+      "scoreToPar": -17,
+      "totalStrokes": 271,
+      "rounds": [67, 71, 64, 69],
+      "winningMargin": "9 strokes",
+      "courseYardage": 6980
+    },
+    "repeatWin": {
+      "scoreToPar": 0,
+      "totalStrokes": 288,
+      "rounds": [68, 76, 72, 72],
+      "winningMargin": "Playoff",
+      "courseYardage": 6980
+    },
+    "playoffNote": "Won the 1966 18-hole playoff after tying Gay Brewer and Tommy Jacobs at even-par 288.",
+    "significance": "Set a tournament scoring record in 1965 and became the first player to successfully defend a Masters title.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/1965_Masters_Tournament",
+      "https://en.wikipedia.org/wiki/1966_Masters_Tournament"
+    ]
+  },
+  {
+    "playerName": "Nick Faldo",
+    "playerSlug": "nick-faldo",
+    "firstYear": 1989,
+    "repeatYear": 1990,
+    "displayLabel": "1989-90",
+    "firstWin": {
+      "scoreToPar": -5,
+      "totalStrokes": 283,
+      "rounds": [68, 73, 77, 65],
+      "winningMargin": "Playoff",
+      "courseYardage": 6905
+    },
+    "repeatWin": {
+      "scoreToPar": -10,
+      "totalStrokes": 278,
+      "rounds": [71, 72, 66, 69],
+      "winningMargin": "Playoff",
+      "courseYardage": 6905
+    },
+    "playoffNote": "Won sudden-death playoffs in both years: Scott Hoch in 1989 and Raymond Floyd in 1990.",
+    "significance": "The only repeat in this group built on consecutive playoff wins.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/1989_Masters_Tournament",
+      "https://en.wikipedia.org/wiki/1990_Masters_Tournament"
+    ]
+  },
+  {
+    "playerName": "Tiger Woods",
+    "playerSlug": "tiger-woods",
+    "firstYear": 2001,
+    "repeatYear": 2002,
+    "displayLabel": "2001-02",
+    "firstWin": {
+      "scoreToPar": -16,
+      "totalStrokes": 272,
+      "rounds": [70, 66, 68, 68],
+      "winningMargin": "2 strokes",
+      "courseYardage": 6985
+    },
+    "repeatWin": {
+      "scoreToPar": -12,
+      "totalStrokes": 276,
+      "rounds": [70, 69, 66, 71],
+      "winningMargin": "3 strokes",
+      "courseYardage": 7270
+    },
+    "playoffNote": null,
+    "significance": "Completed the Tiger Slam in 2001 and defended after Augusta lengthened the course by 285 yards in 2002.",
+    "sources": [
+      "https://www.espn.com/golf/leaderboard/_/tournamentId/15",
+      "https://en.wikipedia.org/wiki/2001_Masters_Tournament",
+      "https://en.wikipedia.org/wiki/2002_Masters_Tournament"
+    ]
+  },
+  {
+    "playerName": "Rory McIlroy",
+    "playerSlug": "rory-mcilroy",
+    "firstYear": 2025,
+    "repeatYear": 2026,
+    "displayLabel": "2025-26",
+    "firstWin": {
+      "scoreToPar": -11,
+      "totalStrokes": 277,
+      "rounds": [72, 66, 66, 73],
+      "winningMargin": "Playoff",
+      "courseYardage": 7555
+    },
+    "repeatWin": {
+      "scoreToPar": -12,
+      "totalStrokes": 276,
+      "rounds": [67, 65, 73, 71],
+      "winningMargin": "1 stroke",
+      "courseYardage": 7565
+    },
+    "playoffNote": "Won the 2025 title in a playoff, then defended in 2026 with a 276 total.",
+    "significance": "Joined Nicklaus, Faldo, and Woods as the fourth successful Masters title defender.",
+    "sources": [
+      "src/data/rory_2025_scorecard.json",
+      "src/data/winner_scorecard.json"
+    ]
+  }
+]

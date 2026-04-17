@@ -8,6 +8,7 @@
     "winnerScorecard": true,
     "fieldHoleAverageScores": true,
     "top10HoleAverageScores": true,
+    "allPlayerScorecards": true,
     "fieldTournamentStatAverages": true,
     "top10TournamentStatAverages": true,
     "scoringDistributions": true
@@ -27,5 +28,5 @@
     "Tournament-level stat averages are computed from parsed ESPN player tournament stat lines.",
     "Unsupported hole-level skill stats are intentionally omitted rather than inferred."
   ],
-  "generatedAt": "2026-04-15T02:29:45.206Z"
+  "generatedAt": "2026-04-17T01:03:06.851Z"
 }

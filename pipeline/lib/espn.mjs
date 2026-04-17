@@ -95,17 +95,35 @@ function parseRoundRowsFromText(text) {
   return rounds.sort((a, b) => a.roundNumber - b.roundNumber);
 }
 
-export function deriveScorecardUrl(href) {
+function extractTournamentId(url) {
+  const text = String(url || "");
+  return (
+    text.match(/\/tournamentId\/(\d+)/i)?.[1] ||
+    text.match(/[?&]tournamentId=(\d+)/i)?.[1] ||
+    null
+  );
+}
+
+export function deriveScorecardUrl(href, tournamentId = null) {
   if (!href) return null;
-  if (href.includes("/golf/player/scorecards/")) return href;
+  let scorecardUrl = null;
+  if (href.includes("/golf/player/scorecards/")) scorecardUrl = href;
   if (href.includes("/golf/player/_/id/")) {
-    return href.replace("/golf/player/_/id/", "/golf/player/scorecards/_/id/");
+    scorecardUrl = href.replace("/golf/player/_/id/", "/golf/player/scorecards/_/id/");
   }
-  return null;
+
+  if (!scorecardUrl) return null;
+  if (!tournamentId || /(?:\/tournamentId\/|[?&]tournamentId=)\d+/i.test(scorecardUrl)) {
+    return scorecardUrl;
+  }
+
+  const separator = scorecardUrl.includes("?") ? "&" : "?";
+  return `${scorecardUrl}${separator}tournamentId=${tournamentId}`;
 }
 
 export function parseLeaderboard(pageData) {
   const players = [];
+  const tournamentId = extractTournamentId(pageData.url);
   for (const row of pageData.rows) {
     const cells = row.cells.filter(Boolean);
     if (!cells.length) continue;
@@ -116,7 +134,7 @@ export function parseLeaderboard(pageData) {
     const link = row.links.find((l) => /\/golf\/player\//.test(l.href));
     if (!link) continue;
 
-    const scorecardUrl = deriveScorecardUrl(link.href);
+    const scorecardUrl = deriveScorecardUrl(link.href, tournamentId);
     if (!scorecardUrl) continue;
 
     const playerName = link.text || cells[1] || row.text;
