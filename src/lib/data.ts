@@ -7,6 +7,11 @@ import tournamentData from "../data/tournament.json";
 import winnerData from "../data/winner.json";
 import winnerScorecardData from "../data/winner_scorecard.json";
 import winnerProfileData from "../data/winner_profile.json";
+import allPlayerScorecardsData from "../data/all_player_scorecards.json";
+import allPlayerTournamentStatsData from "../data/all_player_tournament_stats.json";
+import courseHoleStatsData from "../data/course_hole_stats.json";
+import rory2025ScorecardData from "../data/rory_2025_scorecard.json";
+import repeatChampionBenchmarksData from "../data/repeat_champion_benchmarks.json";
 import recentChampionsData from "../data/recent_champions.json";
 import narrativeAnnotationsData from "../data/narrative_annotations.json";
 import repeatContextData from "../data/repeat_context.json";
@@ -71,10 +76,10 @@ export interface RoundAnalysis {
   strokes: number;
   toPar: number;
   holes: HoleScore[];
-  stats: {
-    gir: number;
-    putts: number;
-    drivingDist: number;
+  stats?: {
+    gir: number | null;
+    putts: number | null;
+    drivingDist: number | null;
   };
 }
 
@@ -95,11 +100,190 @@ export interface ScorecardData {
     holeNumber: number;
     cumulativeToPar: number;
     fieldAvgToPar: number;
+    top10ToPar: number;
   }>;
 }
 
 export const getWinnerScorecard = (): ScorecardData => {
   return winnerScorecardData as unknown as ScorecardData;
+};
+
+export interface PlayerScorecard {
+  playerSlug: string;
+  playerName: string;
+  positionLabel: string;
+  positionNumber: number | null;
+  totalStrokes: number;
+  totalToPar: number;
+  roundsPlayed: number;
+  holesPlayed: number;
+  madeCut: boolean;
+  stats: {
+    metrics: {
+      drivingDistanceAvgYards: number | null;
+      drivingAccuracyPct: number | null;
+      girPct: number | null;
+      puttsPerGir: number | null;
+      sandSavePct: number | null;
+    } | null;
+    scoringSummary: {
+      eagle: number;
+      birdie: number;
+      bogey: number;
+      par: number;
+      doubleOrWorse: number;
+    };
+  } | null;
+  rounds: RoundAnalysis[];
+}
+
+export interface AllPlayerScorecardsData {
+  tournamentId: string | null;
+  year: number;
+  name: string;
+  venueName: string;
+  courseInfo: {
+    name: string;
+    totalPar: number;
+    totalYardage: number;
+  };
+  top10Mode: string;
+  playerCount: number;
+  players: PlayerScorecard[];
+  generatedAt: string;
+}
+
+export const getAllPlayerScorecards = (): AllPlayerScorecardsData => {
+  return allPlayerScorecardsData as unknown as AllPlayerScorecardsData;
+};
+
+export interface PlayerTournamentStats {
+  positionLabel: string;
+  positionNumber: number | null;
+  playerName: string;
+  playerSlug: string;
+  drivingDistanceAvgYards: number | null;
+  drivingAccuracyPct: number | null;
+  girPct: number | null;
+  puttsPerGir: number | null;
+  sandSavePct?: number | null;
+  eagles: number | null;
+  birdies: number | null;
+  pars: number | null;
+  bogeys: number | null;
+  doubles: number | null;
+  scoreToPar: number | null;
+}
+
+export interface TournamentStatAverages {
+  field: {
+    driving_dist?: number | null;
+    fairway_pct?: number | null;
+    gir_pct?: number | null;
+    putts_gir?: number | null;
+    sand_save_pct?: number | null;
+  };
+  top10: {
+    driving_dist?: number | null;
+    fairway_pct?: number | null;
+    gir_pct?: number | null;
+    putts_gir?: number | null;
+    sand_save_pct?: number | null;
+  };
+}
+
+export interface CourseHoleStatsRow {
+  holeNumber: number;
+  holeName?: string;
+  par: number;
+  yards: number;
+  avgScore: number | null;
+  eagles: number;
+  birdies: number;
+  pars: number;
+  bogeys: number;
+  doubles: number;
+  other: number;
+  avgToPar: number | null;
+}
+
+export const getAllPlayerTournamentStats = (): PlayerTournamentStats[] => {
+  const data = allPlayerTournamentStatsData as { players?: PlayerTournamentStats[] } | PlayerTournamentStats[];
+  return Array.isArray(data) ? data : data.players ?? [];
+};
+
+export const getAllPlayerTournamentStatAverages = (): TournamentStatAverages => {
+  const data = allPlayerTournamentStatsData as { averages?: TournamentStatAverages } | PlayerTournamentStats[];
+  return Array.isArray(data)
+    ? { field: {}, top10: {} }
+    : data.averages ?? { field: {}, top10: {} };
+};
+
+export const getAllPlayerTournamentStatsMeta = (): {
+  tournamentId: string | null;
+  source: string | null;
+} => {
+  const data = allPlayerTournamentStatsData as
+    | { tournamentId?: string | null; source?: string | null }
+    | PlayerTournamentStats[];
+
+  return Array.isArray(data)
+    ? { tournamentId: null, source: null }
+    : {
+        tournamentId: data.tournamentId ?? null,
+        source: data.source ?? null,
+      };
+};
+
+export const getCourseHoleStats = (): CourseHoleStatsRow[] => {
+  const data = courseHoleStatsData as { holes?: CourseHoleStatsRow[] } | CourseHoleStatsRow[];
+  return Array.isArray(data) ? data : data.holes ?? [];
+};
+
+export interface RoryRepeatScorecardData {
+  tournamentId: string;
+  year: number;
+  name: string;
+  source: string;
+  player: ScorecardData["player"];
+  courseInfo: ScorecardData["courseInfo"];
+  rounds: RoundAnalysis[];
+  trajectory: Array<{
+    holeNumber: number;
+    cumulativeToPar: number;
+  }>;
+  playoffHoles?: HoleScore[];
+  tournamentStats?: Record<string, number | null>;
+  generatedAt: string;
+}
+
+export const getRory2025Scorecard = (): RoryRepeatScorecardData => {
+  return rory2025ScorecardData as unknown as RoryRepeatScorecardData;
+};
+
+export interface RepeatChampionWinSummary {
+  scoreToPar: number;
+  totalStrokes: number;
+  rounds: number[];
+  winningMargin: string;
+  courseYardage: number;
+}
+
+export interface RepeatChampionBenchmarkRow {
+  playerName: string;
+  playerSlug: string;
+  firstYear: number;
+  repeatYear: number;
+  displayLabel: string;
+  firstWin: RepeatChampionWinSummary;
+  repeatWin: RepeatChampionWinSummary;
+  playoffNote: string | null;
+  significance: string;
+  sources: string[];
+}
+
+export const getRepeatChampionBenchmarks = (): RepeatChampionBenchmarkRow[] => {
+  return repeatChampionBenchmarksData as RepeatChampionBenchmarkRow[];
 };
 
 /**

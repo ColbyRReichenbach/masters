@@ -1,0 +1,1102 @@
+{
+  "tournamentId": "401703504",
+  "year": 2025,
+  "name": "Masters Tournament",
+  "source": "https://site.web.api.espn.com/apis/site/v2/sports/golf/pga/leaderboard/401703504/playersummary?region=us&lang=en&contentorigin=espn&player=3470",
+  "player": {
+    "slug": "rory-mcilroy",
+    "displayName": "Rory McIlroy",
+    "totalToPar": -11,
+    "totalStrokes": 277
+  },
+  "courseInfo": {
+    "name": "Augusta National Golf Club",
+    "totalPar": 72,
+    "totalYardage": 7555
+  },
+  "rounds": [
+    {
+      "roundNumber": 1,
+      "strokes": 72,
+      "toPar": 0,
+      "holes": [
+        {
+          "holeNumber": 1,
+          "holeName": "Tea Olive",
+          "par": 4,
+          "yardage": 445,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 2,
+          "holeName": "Pink Dogwood",
+          "par": 5,
+          "yardage": 585,
+          "score": 5,
+          "toPar": 0,
+          "displayValue": "5",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 3,
+          "holeName": "Flowering Peach",
+          "par": 4,
+          "yardage": 350,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 4,
+          "holeName": "Flowering Crab Apple",
+          "par": 3,
+          "yardage": 240,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 5,
+          "holeName": "Magnolia",
+          "par": 4,
+          "yardage": 495,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 6,
+          "holeName": "Juniper",
+          "par": 3,
+          "yardage": 180,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 7,
+          "holeName": "Pampas",
+          "par": 4,
+          "yardage": 450,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 8,
+          "holeName": "Yellow Jasmine",
+          "par": 5,
+          "yardage": 570,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 9,
+          "holeName": "Carolina Cherry",
+          "par": 4,
+          "yardage": 460,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 10,
+          "holeName": "Camellia",
+          "par": 4,
+          "yardage": 495,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 11,
+          "holeName": "White Dogwood",
+          "par": 4,
+          "yardage": 520,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 12,
+          "holeName": "Golden Bell",
+          "par": 3,
+          "yardage": 155,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 13,
+          "holeName": "Azalea",
+          "par": 5,
+          "yardage": 545,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 14,
+          "holeName": "Chinese Fir",
+          "par": 4,
+          "yardage": 440,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 15,
+          "holeName": "Firethorn",
+          "par": 5,
+          "yardage": 550,
+          "score": 7,
+          "toPar": 2,
+          "displayValue": "7",
+          "label": "Double+"
+        },
+        {
+          "holeNumber": 16,
+          "holeName": "Redbud",
+          "par": 3,
+          "yardage": 170,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 17,
+          "holeName": "Nandina",
+          "par": 4,
+          "yardage": 440,
+          "score": 6,
+          "toPar": 2,
+          "displayValue": "6",
+          "label": "Double+"
+        },
+        {
+          "holeNumber": 18,
+          "holeName": "Holly",
+          "par": 4,
+          "yardage": 465,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        }
+      ],
+      "stats": {
+        "gir": null,
+        "putts": null,
+        "drivingDist": null
+      }
+    },
+    {
+      "roundNumber": 2,
+      "strokes": 66,
+      "toPar": -6,
+      "holes": [
+        {
+          "holeNumber": 1,
+          "holeName": "Tea Olive",
+          "par": 4,
+          "yardage": 445,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 2,
+          "holeName": "Pink Dogwood",
+          "par": 5,
+          "yardage": 585,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 3,
+          "holeName": "Flowering Peach",
+          "par": 4,
+          "yardage": 350,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 4,
+          "holeName": "Flowering Crab Apple",
+          "par": 3,
+          "yardage": 240,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 5,
+          "holeName": "Magnolia",
+          "par": 4,
+          "yardage": 495,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 6,
+          "holeName": "Juniper",
+          "par": 3,
+          "yardage": 180,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 7,
+          "holeName": "Pampas",
+          "par": 4,
+          "yardage": 450,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 8,
+          "holeName": "Yellow Jasmine",
+          "par": 5,
+          "yardage": 570,
+          "score": 5,
+          "toPar": 0,
+          "displayValue": "5",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 9,
+          "holeName": "Carolina Cherry",
+          "par": 4,
+          "yardage": 460,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 10,
+          "holeName": "Camellia",
+          "par": 4,
+          "yardage": 495,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 11,
+          "holeName": "White Dogwood",
+          "par": 4,
+          "yardage": 520,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 12,
+          "holeName": "Golden Bell",
+          "par": 3,
+          "yardage": 155,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 13,
+          "holeName": "Azalea",
+          "par": 5,
+          "yardage": 545,
+          "score": 3,
+          "toPar": -2,
+          "displayValue": "3",
+          "label": "Eagle"
+        },
+        {
+          "holeNumber": 14,
+          "holeName": "Chinese Fir",
+          "par": 4,
+          "yardage": 440,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 15,
+          "holeName": "Firethorn",
+          "par": 5,
+          "yardage": 550,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 16,
+          "holeName": "Redbud",
+          "par": 3,
+          "yardage": 170,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 17,
+          "holeName": "Nandina",
+          "par": 4,
+          "yardage": 440,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 18,
+          "holeName": "Holly",
+          "par": 4,
+          "yardage": 465,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        }
+      ],
+      "stats": {
+        "gir": null,
+        "putts": null,
+        "drivingDist": null
+      }
+    },
+    {
+      "roundNumber": 3,
+      "strokes": 66,
+      "toPar": -6,
+      "holes": [
+        {
+          "holeNumber": 1,
+          "holeName": "Tea Olive",
+          "par": 4,
+          "yardage": 445,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 2,
+          "holeName": "Pink Dogwood",
+          "par": 5,
+          "yardage": 585,
+          "score": 3,
+          "toPar": -2,
+          "displayValue": "3",
+          "label": "Eagle"
+        },
+        {
+          "holeNumber": 3,
+          "holeName": "Flowering Peach",
+          "par": 4,
+          "yardage": 350,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 4,
+          "holeName": "Flowering Crab Apple",
+          "par": 3,
+          "yardage": 240,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 5,
+          "holeName": "Magnolia",
+          "par": 4,
+          "yardage": 495,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 6,
+          "holeName": "Juniper",
+          "par": 3,
+          "yardage": 180,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 7,
+          "holeName": "Pampas",
+          "par": 4,
+          "yardage": 450,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 8,
+          "holeName": "Yellow Jasmine",
+          "par": 5,
+          "yardage": 570,
+          "score": 6,
+          "toPar": 1,
+          "displayValue": "6",
+          "label": "Bogey"
+        },
+        {
+          "holeNumber": 9,
+          "holeName": "Carolina Cherry",
+          "par": 4,
+          "yardage": 460,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 10,
+          "holeName": "Camellia",
+          "par": 4,
+          "yardage": 495,
+          "score": 5,
+          "toPar": 1,
+          "displayValue": "5",
+          "label": "Bogey"
+        },
+        {
+          "holeNumber": 11,
+          "holeName": "White Dogwood",
+          "par": 4,
+          "yardage": 520,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 12,
+          "holeName": "Golden Bell",
+          "par": 3,
+          "yardage": 155,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 13,
+          "holeName": "Azalea",
+          "par": 5,
+          "yardage": 545,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 14,
+          "holeName": "Chinese Fir",
+          "par": 4,
+          "yardage": 440,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 15,
+          "holeName": "Firethorn",
+          "par": 5,
+          "yardage": 550,
+          "score": 3,
+          "toPar": -2,
+          "displayValue": "3",
+          "label": "Eagle"
+        },
+        {
+          "holeNumber": 16,
+          "holeName": "Redbud",
+          "par": 3,
+          "yardage": 170,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 17,
+          "holeName": "Nandina",
+          "par": 4,
+          "yardage": 440,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 18,
+          "holeName": "Holly",
+          "par": 4,
+          "yardage": 465,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        }
+      ],
+      "stats": {
+        "gir": null,
+        "putts": null,
+        "drivingDist": null
+      }
+    },
+    {
+      "roundNumber": 4,
+      "strokes": 73,
+      "toPar": 1,
+      "holes": [
+        {
+          "holeNumber": 1,
+          "holeName": "Tea Olive",
+          "par": 4,
+          "yardage": 445,
+          "score": 6,
+          "toPar": 2,
+          "displayValue": "6",
+          "label": "Double+"
+        },
+        {
+          "holeNumber": 2,
+          "holeName": "Pink Dogwood",
+          "par": 5,
+          "yardage": 585,
+          "score": 5,
+          "toPar": 0,
+          "displayValue": "5",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 3,
+          "holeName": "Flowering Peach",
+          "par": 4,
+          "yardage": 350,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 4,
+          "holeName": "Flowering Crab Apple",
+          "par": 3,
+          "yardage": 240,
+          "score": 2,
+          "toPar": -1,
+          "displayValue": "2",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 5,
+          "holeName": "Magnolia",
+          "par": 4,
+          "yardage": 495,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 6,
+          "holeName": "Juniper",
+          "par": 3,
+          "yardage": 180,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 7,
+          "holeName": "Pampas",
+          "par": 4,
+          "yardage": 450,
+          "score": 4,
+          "toPar": 0,
+          "displayValue": "4",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 8,
+          "holeName": "Yellow Jasmine",
+          "par": 5,
+          "yardage": 570,
+          "score": 5,
+          "toPar": 0,
+          "displayValue": "5",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 9,
+          "holeName": "Carolina Cherry",
+          "par": 4,
+          "yardage": 460,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 10,
+          "holeName": "Camellia",
+          "par": 4,
+          "yardage": 495,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 11,
+          "holeName": "White Dogwood",
+          "par": 4,
+          "yardage": 520,
+          "score": 5,
+          "toPar": 1,
+          "displayValue": "5",
+          "label": "Bogey"
+        },
+        {
+          "holeNumber": 12,
+          "holeName": "Golden Bell",
+          "par": 3,
+          "yardage": 155,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 13,
+          "holeName": "Azalea",
+          "par": 5,
+          "yardage": 545,
+          "score": 7,
+          "toPar": 2,
+          "displayValue": "7",
+          "label": "Double+"
+        },
+        {
+          "holeNumber": 14,
+          "holeName": "Chinese Fir",
+          "par": 4,
+          "yardage": 440,
+          "score": 5,
+          "toPar": 1,
+          "displayValue": "5",
+          "label": "Bogey"
+        },
+        {
+          "holeNumber": 15,
+          "holeName": "Firethorn",
+          "par": 5,
+          "yardage": 550,
+          "score": 4,
+          "toPar": -1,
+          "displayValue": "4",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 16,
+          "holeName": "Redbud",
+          "par": 3,
+          "yardage": 170,
+          "score": 3,
+          "toPar": 0,
+          "displayValue": "3",
+          "label": "Par"
+        },
+        {
+          "holeNumber": 17,
+          "holeName": "Nandina",
+          "par": 4,
+          "yardage": 440,
+          "score": 3,
+          "toPar": -1,
+          "displayValue": "3",
+          "label": "Birdie"
+        },
+        {
+          "holeNumber": 18,
+          "holeName": "Holly",
+          "par": 4,
+          "yardage": 465,
+          "score": 5,
+          "toPar": 1,
+          "displayValue": "5",
+          "label": "Bogey"
+        }
+      ],
+      "stats": {
+        "gir": null,
+        "putts": null,
+        "drivingDist": null
+      }
+    }
+  ],
+  "trajectory": [
+    {
+      "holeNumber": 1,
+      "cumulativeToPar": 0
+    },
+    {
+      "holeNumber": 2,
+      "cumulativeToPar": 0
+    },
+    {
+      "holeNumber": 3,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 4,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 5,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 6,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 7,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 8,
+      "cumulativeToPar": -2
+    },
+    {
+      "holeNumber": 9,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 10,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 11,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 12,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 13,
+      "cumulativeToPar": -4
+    },
+    {
+      "holeNumber": 14,
+      "cumulativeToPar": -4
+    },
+    {
+      "holeNumber": 15,
+      "cumulativeToPar": -2
+    },
+    {
+      "holeNumber": 16,
+      "cumulativeToPar": -2
+    },
+    {
+      "holeNumber": 17,
+      "cumulativeToPar": 0
+    },
+    {
+      "holeNumber": 18,
+      "cumulativeToPar": 0
+    },
+    {
+      "holeNumber": 19,
+      "cumulativeToPar": 0
+    },
+    {
+      "holeNumber": 20,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 21,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 22,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 23,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 24,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 25,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 26,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 27,
+      "cumulativeToPar": -1
+    },
+    {
+      "holeNumber": 28,
+      "cumulativeToPar": -2
+    },
+    {
+      "holeNumber": 29,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 30,
+      "cumulativeToPar": -3
+    },
+    {
+      "holeNumber": 31,
+      "cumulativeToPar": -5
+    },
+    {
+      "holeNumber": 32,
+      "cumulativeToPar": -5
+    },
+    {
+      "holeNumber": 33,
+      "cumulativeToPar": -6
+    },
+    {
+      "holeNumber": 34,
+      "cumulativeToPar": -6
+    },
+    {
+      "holeNumber": 35,
+      "cumulativeToPar": -6
+    },
+    {
+      "holeNumber": 36,
+      "cumulativeToPar": -6
+    },
+    {
+      "holeNumber": 37,
+      "cumulativeToPar": -7
+    },
+    {
+      "holeNumber": 38,
+      "cumulativeToPar": -9
+    },
+    {
+      "holeNumber": 39,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 40,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 41,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 42,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 43,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 44,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 45,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 46,
+      "cumulativeToPar": -9
+    },
+    {
+      "holeNumber": 47,
+      "cumulativeToPar": -9
+    },
+    {
+      "holeNumber": 48,
+      "cumulativeToPar": -9
+    },
+    {
+      "holeNumber": 49,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 50,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 51,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 52,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 53,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 54,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 55,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 56,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 57,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 58,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 59,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 60,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 61,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 62,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 63,
+      "cumulativeToPar": -13
+    },
+    {
+      "holeNumber": 64,
+      "cumulativeToPar": -14
+    },
+    {
+      "holeNumber": 65,
+      "cumulativeToPar": -13
+    },
+    {
+      "holeNumber": 66,
+      "cumulativeToPar": -13
+    },
+    {
+      "holeNumber": 67,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 68,
+      "cumulativeToPar": -10
+    },
+    {
+      "holeNumber": 69,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 70,
+      "cumulativeToPar": -11
+    },
+    {
+      "holeNumber": 71,
+      "cumulativeToPar": -12
+    },
+    {
+      "holeNumber": 72,
+      "cumulativeToPar": -11
+    }
+  ],
+  "playoffHoles": [
+    {
+      "holeNumber": 18,
+      "holeName": "Holly",
+      "par": 4,
+      "yardage": 465,
+      "score": 3,
+      "toPar": -1,
+      "displayValue": "3",
+      "label": "Birdie"
+    }
+  ],
+  "tournamentStats": {
+    "drivingDistanceAvgYards": 317.9,
+    "drivingAccuracyPct": 62.5,
+    "girPct": 65.3,
+    "puttsPerGir": 1.633,
+    "sandSavePct": 25,
+    "eagles": 3,
+    "birdies": 18,
+    "pars": 42,
+    "bogeys": 5,
+    "doubles": 4
+  },
+  "generatedAt": "2026-04-17T01:05:49.182Z"
+}

@@ -7,68 +7,84 @@
     {
       "key": "driving_dist",
       "label": "Driving Distance",
-      "winnerValue": 334.0,
-      "fieldValue": 305.2,
-      "top10Value": 318.5,
-      "recentChampionMedian": 312.4,
-      "deltaVsField": 28.8,
+      "winnerValue": 330.4,
+      "fieldValue": 303.777,
+      "top10Value": 309.52,
+      "recentChampionMedian": null,
+      "deltaVsField": 26.623,
       "directionality": "higher_better",
       "unit": "yds"
+    },
+    {
+      "key": "fairway_pct",
+      "label": "Fairway Accuracy",
+      "winnerValue": 55.4,
+      "fieldValue": 71.557,
+      "top10Value": 73.94,
+      "recentChampionMedian": null,
+      "deltaVsField": -16.157,
+      "directionality": "higher_better",
+      "unit": "%"
     },
     {
       "key": "gir_pct",
       "label": "Greens in Regulation",
       "winnerValue": 66.7,
-      "fieldValue": 58.4,
-      "top10Value": 64.2,
-      "recentChampionMedian": 68.1,
-      "deltaVsField": 8.3,
+      "fieldValue": 62.599,
+      "top10Value": 70.71,
+      "recentChampionMedian": null,
+      "deltaVsField": 4.101,
       "directionality": "higher_better",
       "unit": "%"
     },
     {
       "key": "putts_gir",
       "label": "Putts per GIR",
-      "winnerValue": 1.54,
-      "fieldValue": 1.72,
-      "top10Value": 1.61,
-      "recentChampionMedian": 1.58,
-      "deltaVsField": -0.18,
+      "winnerValue": 1.636,
+      "fieldValue": 1.798,
+      "top10Value": 1.731,
+      "recentChampionMedian": null,
+      "deltaVsField": -0.162,
       "directionality": "lower_better",
       "unit": "avg"
     },
     {
-      "key": "scrambling",
-      "label": "Scrambling Rank",
-      "winnerValue": 2,
-      "fieldValue": 45,
-      "top10Value": 8,
-      "recentChampionMedian": 12,
-      "deltaVsField": -43,
-      "directionality": "lower_better",
-      "unit": "pos"
-    },
-    {
-      "key": "fairway_pct",
-      "label": "Fairway Accuracy",
-      "winnerValue": 55.4,
-      "fieldValue": 62.1,
-      "top10Value": 68.4,
-      "recentChampionMedian": 61.2,
-      "deltaVsField": -6.7,
+      "key": "sand_save_pct",
+      "label": "Sand Saves",
+      "winnerValue": 50,
+      "fieldValue": 38.791,
+      "top10Value": 36,
+      "recentChampionMedian": null,
+      "deltaVsField": 11.209,
       "directionality": "higher_better",
       "unit": "%"
     }
   ],
   "distributions": [
-    { "category": "Birdie+", "percentage": 25.0, "fieldPercentage": 18.2 },
-    { "category": "Par", "percentage": 62.5, "fieldPercentage": 60.4 },
-    { "category": "Bogey", "percentage": 9.7, "fieldPercentage": 16.5 },
-    { "category": "Double+", "percentage": 2.8, "fieldPercentage": 4.9 }
+    {
+      "category": "Birdie+",
+      "percentage": 33.3,
+      "fieldPercentage": 18.9
+    },
+    {
+      "category": "Par",
+      "percentage": 52.8,
+      "fieldPercentage": 60
+    },
+    {
+      "category": "Bogey",
+      "percentage": 11.1,
+      "fieldPercentage": 18.4
+    },
+    {
+      "category": "Double+",
+      "percentage": 2.8,
+      "fieldPercentage": 2.7
+    }
   ],
   "verdicts": {
-    "primarySeparator": "Raw Power: Rory out-drove the field by 28.8 yards on average, effectively shortening the par-5s and allowing for high-launch wedge approaches on dangerous pins.",
-    "secondarySupport": "Scrambling Resilience: Despite missing more fairways than the field median, McIlroy maintained his lead through elite recovery play, ranking 2nd specifically in 'Pressure Scrambling' during the final 9 holes.",
-    "weaknessOvercome": "Green Surface Mastery: His 'Putts per GIR' (1.54) was the lowest seen by a champion in the last 4 years, nullifying several missed Greens in Regulation on the back-nine of Sunday."
+    "primarySeparator": "He averaged 330.4 yards per drive against a field average of 303.777.",
+    "secondarySupport": "He hit 66.7% of greens in regulation against a field average of 62.599%.",
+    "weaknessOvercome": "He averaged 1.636 putts per GIR versus a field average of 1.798."
   }
 }

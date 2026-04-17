@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "leaderboard": "https://www.espn.com/golf/leaderboard/_/tournamentId/401811941",
+    "holeStats": "https://www.masters.com/en_US/course/index.html"
+  },
+  "generationMode": "automatic_public_web_extraction",
+  "supported": {
+    "winnerScorecard": true,
+    "fieldHoleAverageScores": true,
+    "top10HoleAverageScores": true,
+    "fieldTournamentStatAverages": true,
+    "top10TournamentStatAverages": true,
+    "scoringDistributions": true
+  },
+  "notSupported": {
+    "holeLevelFairwayHit": true,
+    "holeLevelGir": true,
+    "holeLevelPutts": true,
+    "holeLevelFieldFairwayPct": true,
+    "holeLevelFieldGirPct": true,
+    "holeLevelTop10FairwayPct": true,
+    "holeLevelTop10GirPct": true,
+    "autoEditorialNarrative": true
+  },
+  "notes": [
+    "All field and top-10 score averages are computed from parsed ESPN player scorecards.",
+    "Tournament-level stat averages are computed from parsed ESPN player tournament stat lines.",
+    "Unsupported hole-level skill stats are intentionally omitted rather than inferred."
+  ],
+  "generatedAt": "2026-04-15T02:29:45.206Z"
+}
