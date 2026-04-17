@@ -72,7 +72,7 @@ export default function Profile() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-24">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-64">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,23 +91,6 @@ export default function Profile() {
             <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed mb-12">
               Driving distance, greens in regulation, putting, and scoring — Rory's numbers against every player who teed it up at Augusta.
             </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
-              {model.kpis.slice(0, 3).map((kpi) => (
-                <div key={kpi.key} className="glass-dark p-6 rounded-2xl">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 block mb-2">
-                    {kpi.config.label}
-                  </span>
-                  <div className="text-3xl font-serif font-bold text-white mb-1">
-                    {kpi.value}
-                    <span className="text-sm ml-1 opacity-60 font-sans uppercase tracking-tighter">{kpi.config.unit === "count" || kpi.config.unit === "toPar" ? "" : kpi.config.unit}</span>
-                  </div>
-                  <div className="text-[10px] font-medium text-masters-yellow uppercase tracking-widest">
-                    Field Avg: {kpi.fieldAverage}{kpi.config.unit === "count" || kpi.config.unit === "toPar" ? "" : kpi.config.unit}
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
