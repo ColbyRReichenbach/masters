@@ -394,19 +394,20 @@ export function getDerivedWinnerProfile(
   const driving = metricByKey.get("driving_dist");
   const gir = metricByKey.get("gir_pct");
   const putts = metricByKey.get("putts_gir");
+  const accuracy = metricByKey.get("fairway_pct");
 
   return {
     ...profile,
     metrics,
     verdicts: {
       primarySeparator: driving
-        ? `At ${formatProfileMetricValue(driving.winnerValue, driving.unit)} per drive — ${formatProfileMetricValue(Math.abs(driving.winnerValue - driving.fieldValue), driving.unit)} longer than the field average — Rory turned Augusta's par 5s and long par 4s into scoring opportunities others couldn't access.`
+        ? `At ${formatProfileMetricValue(driving.winnerValue, driving.unit)} per drive — ${formatProfileMetricValue(Math.abs(driving.winnerValue - driving.fieldValue), driving.unit)} ${driving.winnerValue >= driving.fieldValue ? "longer" : "shorter"} than the field average — Rory turned Augusta's par 5s and long par 4s into scoring opportunities others couldn't access.`
         : profile.verdicts.primarySeparator,
       secondarySupport: gir
-        ? `Hitting ${formatProfileMetricValue(gir.winnerValue, gir.unit)} of greens in regulation, Rory consistently put himself in two-putt territory — the foundation of avoiding bogeys at Augusta.`
+        ? `Hitting ${formatProfileMetricValue(gir.winnerValue, gir.unit)} of greens in regulation — ${gir.winnerValue >= gir.fieldValue ? "above" : "below"} the field average — Rory consistently put himself in two-putt territory, the foundation of avoiding bogeys at Augusta.`
         : profile.verdicts.secondarySupport,
       weaknessOvercome: putts
-        ? `Despite hitting fairways at well below the field average, Rory converted at ${formatProfileMetricValue(putts.winnerValue, putts.unit)} putts per GIR — better than the field's ${formatProfileMetricValue(putts.fieldValue, putts.unit)} — turning approach play into a net positive.`
+        ? `${accuracy && accuracy.winnerValue < accuracy.fieldValue ? "Despite" : "And by"} hitting fairways ${accuracy && accuracy.winnerValue < accuracy.fieldValue ? "below" : "around"} the field average, Rory converted at ${formatProfileMetricValue(putts.winnerValue, putts.unit)} putts per GIR — ${putts.winnerValue <= putts.fieldValue ? "better" : "worse"} than the field's ${formatProfileMetricValue(putts.fieldValue, putts.unit)} — turning approach play into a net positive.`
         : profile.verdicts.weaknessOvercome,
     },
   };
