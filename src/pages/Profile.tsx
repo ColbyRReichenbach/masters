@@ -72,23 +72,23 @@ export default function Profile() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-20">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-72">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-6 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
                 Stats & Field Comparison
               </span>
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-tighter text-shadow-premium">
+            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tighter text-shadow-premium">
               How Rory <span className="italic text-masters-yellow">Measured Up</span>
               <br />
               to the Field.
             </h1>
-            <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed">
+            <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed mb-12">
               Driving distance, greens in regulation, putting, and scoring — Rory's numbers against every player who teed it up at Augusta.
             </p>
           </motion.div>
