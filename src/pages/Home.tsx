@@ -47,19 +47,19 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
-                Back-to-Back Masters Champion
+                2025 & 2026 Masters Champion
               </span>
             </div>
 
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-8 leading-[0.9] tracking-tighter text-shadow-premium">
-              Rory’s <span className="italic text-masters-yellow">72-Hole</span>
+              The <span className="italic text-masters-yellow">72-Hole</span>
               <br />
-              Path.
+              Scorecard.
             </h1>
 
             <p className="font-sans text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
-              A hole-by-hole look at how McIlroy won the 2026 Masters, with direct
-              score comparisons against the field and the top-10 plus ties.
+              Every hole of Rory's 2026 Masters — scored against the full field
+              and the top-10 contenders. Click any hole to drill in.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl">
@@ -69,11 +69,11 @@ export default function Home() {
                   value: formatToPar(model.winner.scoreToPar),
                   sub: `${model.winner.totalStrokes} Strokes`,
                 },
-                { label: "Field Size", value: `${model.tournament.fieldSize}`, sub: "Full ESPN field" },
+                { label: "Field Size", value: `${model.tournament.fieldSize}`, sub: "Full field" },
                 {
-                  label: "Four Rounds",
+                  label: "Round by Round",
                   value: model.winner.rounds.join("-"),
-                  sub: "Full Card",
+                  sub: "R1 · R2 · R3 · R4",
                 },
               ].map((stat) => (
                 <div key={stat.label} className="glass-dark p-6 rounded-2xl">
@@ -101,7 +101,7 @@ export default function Home() {
           className="glass rounded-[48px] p-8 md:p-14"
         >
           <SectionHeader
-            eyebrow="Traditional Card"
+            eyebrow="Official Scorecard"
             title="Rory’s Card"
             subtitle={`"${model.narratives.homepage.scorecardLead}"`}
             icon={<Trophy size={32} className="text-augusta-gold" />}
@@ -172,7 +172,7 @@ export default function Home() {
 
           <aside className="lg:col-span-4 space-y-8 text-masters-green">
             <div className="bg-white rounded-[32px] p-10 border border-masters-green/10">
-              <h4 className="font-serif text-2xl font-bold mb-8 italic">Verified Performance.</h4>
+              <h4 className="font-serif text-2xl font-bold mb-8 italic">By the Numbers.</h4>
               <div className="space-y-10">
                 {model.profile.metrics.slice(0, 3).map((metric) => (
                   <div key={metric.key}>
@@ -207,17 +207,17 @@ export default function Home() {
               <BarChart3 className="absolute -bottom-8 -right-8 text-masters-green/5 group-hover:rotate-6 transition-transform duration-700" size={170} />
               <div className="relative z-10">
                 <span className="text-[10px] font-black uppercase tracking-widest opacity-40 mb-2 block">
-                  Historical Perspective
+                  The Repeat
                 </span>
                 <h4 className="font-serif text-2xl font-bold mb-6 leading-tight italic">
-                  Joining the
+                  One of Four
                   <br />
-                  Repeat-Champion
+                  Defenders
                   <br />
-                  Company.
+                  Ever.
                 </h4>
                 <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest">
-                  Evolution Analysis <ArrowRight size={14} />
+                  Compare the Title Runs <ArrowRight size={14} />
                 </div>
               </div>
             </Link>

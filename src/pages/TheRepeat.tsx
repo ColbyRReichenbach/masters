@@ -33,21 +33,21 @@ export default function TheRepeat() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
-                Historical Context
+                Back-to-Back · Augusta National
               </span>
             </div>
             <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-8 leading-[0.9] tracking-tighter text-shadow-premium">
-              The <span className="italic text-masters-yellow">Repeat.</span>
+              The <span className="italic text-masters-yellow">Defense.</span>
               <br />
-              Defying Odds.
+              Only Four Times Ever.
             </h1>
             <p className="font-sans text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
-              Rory’s 2026 defense joins Nicklaus, Faldo, and Woods in the rarest Masters company. This page compares his two title paths and the historical repeat benchmarks.
+              Only Nicklaus, Faldo, and Woods had done it before. Compare Rory's 2025 breakthrough and 2026 defense hole by hole, round by round.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
               {[
-                { label: "Repeat Club", value: `${model.repeatContext.repeatSetSize}`, sub: "Successful defenders" },
+                { label: "Ever Done It", value: `${model.repeatContext.repeatSetSize}`, sub: "Back-to-back champions" },
                 {
                   label: "Rory 2025",
                   value: formatToPar(model.scorecard2025.player.totalToPar),
@@ -102,10 +102,10 @@ export default function TheRepeat() {
               <Trophy className="absolute -bottom-8 -right-8 text-white/5 rotate-[-12deg]" size={190} />
               <div className="relative z-10">
                 <h3 className="font-serif text-3xl font-bold mb-6 italic !text-masters-yellow">
-                  The Immortal Rank.
+                  The Rarest Company.
                 </h3>
                 <p className="text-sm opacity-75 leading-relaxed mb-8">
-                  {model.repeatContext.intro} The round story below is regulation-hole only; Rory’s 2025 playoff is noted in the benchmark data but not blended into the 72-hole comparison.
+                  {model.repeatContext.intro} The paths below cover regulation play only — Rory's 2025 playoff hole is excluded from the 72-hole comparison.
                 </p>
                 <div className="h-px w-full bg-white/10 mb-8" />
                 <Link
@@ -160,7 +160,7 @@ export default function TheRepeat() {
                 </div>
               ) : (
                 <p className="text-sm italic text-ink-600 leading-relaxed">
-                  Click a path point or round story hole to inspect the round, hole, score delta, par, and yardage.
+                  Click any point on the path chart or any hole in the round grid to compare 2025 vs 2026 on that hole.
                 </p>
               )}
             </motion.div>

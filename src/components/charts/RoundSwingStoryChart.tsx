@@ -35,7 +35,7 @@ function roundVerdict(delta: number) {
   return "The round played even";
 }
 
-function formatHoleSwing(cell: RepeatHoleDeltaCell | undefined, fallback: string) {
+function formatHoleSwing(cell: RepeatHoleDeltaCell | undefined, fallback: string, nameClassName?: string) {
   if (!cell) return fallback;
   const isLong = cell.holeName.length > 15;
   return (
@@ -43,7 +43,8 @@ function formatHoleSwing(cell: RepeatHoleDeltaCell | undefined, fallback: string
       <span className="flex flex-col min-w-0">
         <span className={cn(
           "font-serif font-black leading-[1.1] break-words",
-          isLong ? "text-[17px]" : "text-xl"
+          isLong ? "text-[17px]" : "text-xl",
+          nameClassName
         )}>
           {cell.holeName}
           <span className="text-[10px] font-sans font-bold opacity-30 ml-1.5 inline-block align-middle transform -translate-y-[1px]">#{cell.holeNumber}</span>
@@ -164,8 +165,8 @@ export function RoundSwingStoryChart({
                 <span className="text-[9px] font-black uppercase tracking-widest text-ink-400 block mb-1">
                   Worst Swing
                 </span>
-                <span className={cn("font-serif text-xl font-black flex w-full", deltaTextTone(round.worstSwing?.delta ?? 0))}>
-                  {formatHoleSwing(round.worstSwing, "Even")}
+                <span className={cn("font-serif text-xl font-black text-under-par flex w-full", deltaTextTone(round.worstSwing?.delta ?? 0))}>
+                  {formatHoleSwing(round.worstSwing, "Even", "text-under-par")}
                 </span>
               </div>
             </div>

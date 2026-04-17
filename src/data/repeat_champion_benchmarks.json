@@ -8,14 +8,24 @@
     "firstWin": {
       "scoreToPar": -17,
       "totalStrokes": 271,
-      "rounds": [67, 71, 64, 69],
+      "rounds": [
+        67,
+        71,
+        64,
+        69
+      ],
       "winningMargin": "9 strokes",
       "courseYardage": 6980
     },
     "repeatWin": {
       "scoreToPar": 0,
       "totalStrokes": 288,
-      "rounds": [68, 76, 72, 72],
+      "rounds": [
+        68,
+        76,
+        72,
+        72
+      ],
       "winningMargin": "Playoff",
       "courseYardage": 6980
     },
@@ -35,14 +45,24 @@
     "firstWin": {
       "scoreToPar": -5,
       "totalStrokes": 283,
-      "rounds": [68, 73, 77, 65],
+      "rounds": [
+        68,
+        73,
+        77,
+        65
+      ],
       "winningMargin": "Playoff",
       "courseYardage": 6905
     },
     "repeatWin": {
       "scoreToPar": -10,
       "totalStrokes": 278,
-      "rounds": [71, 72, 66, 69],
+      "rounds": [
+        71,
+        72,
+        66,
+        69
+      ],
       "winningMargin": "Playoff",
       "courseYardage": 6905
     },
@@ -62,14 +82,24 @@
     "firstWin": {
       "scoreToPar": -16,
       "totalStrokes": 272,
-      "rounds": [70, 66, 68, 68],
+      "rounds": [
+        70,
+        66,
+        68,
+        68
+      ],
       "winningMargin": "2 strokes",
       "courseYardage": 6985
     },
     "repeatWin": {
       "scoreToPar": -12,
       "totalStrokes": 276,
-      "rounds": [70, 69, 66, 71],
+      "rounds": [
+        70,
+        69,
+        66,
+        71
+      ],
       "winningMargin": "3 strokes",
       "courseYardage": 7270
     },
@@ -90,19 +120,29 @@
     "firstWin": {
       "scoreToPar": -11,
       "totalStrokes": 277,
-      "rounds": [72, 66, 66, 73],
+      "rounds": [
+        72,
+        66,
+        66,
+        73
+      ],
       "winningMargin": "Playoff",
       "courseYardage": 7555
     },
     "repeatWin": {
       "scoreToPar": -12,
       "totalStrokes": 276,
-      "rounds": [67, 65, 73, 71],
+      "rounds": [
+        67,
+        65,
+        73,
+        71
+      ],
       "winningMargin": "1 stroke",
       "courseYardage": 7565
     },
     "playoffNote": "Won the 2025 title in a playoff, then defended in 2026 with a 276 total.",
-    "significance": "Joined Nicklaus, Faldo, and Woods as the fourth successful Masters title defender.",
+    "significance": "Won the 2025 title in a playoff to complete the Career Grand Slam, then came back in 2026 to become only the fourth player ever to defend at Augusta.",
     "sources": [
       "src/data/rory_2025_scorecard.json",
       "src/data/winner_scorecard.json"

@@ -11,12 +11,51 @@ interface TraditionalScorecardProps {
   onSelectHole: (holeNumber: number, focus: ScorecardFocus) => void;
 }
 
-function getScoreClass(score: number, par: number) {
+function ScoreCell({ score, par }: { score: number; par: number }) {
   const diff = score - par;
-  if (diff <= -2) return "score-eagle text-masters-yellow";
-  if (diff === -1) return "score-birdie text-masters-yellow";
-  if (diff >= 1) return "score-bogey text-masters-green";
-  return "score-par text-masters-green";
+
+  if (diff <= -2) {
+    // Eagle: two concentric circles, colored number
+    return (
+      <span className="relative inline-flex items-center justify-center w-8 h-8 rounded-full border border-black">
+        <span className="absolute rounded-full border border-black" style={{ inset: '3px' }} />
+        <span className="relative z-10 font-serif text-sm font-bold text-masters-yellow leading-none">{score}</span>
+      </span>
+    );
+  }
+
+  if (diff === -1) {
+    // Birdie: one circle, colored number
+    return (
+      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-black">
+        <span className="font-serif text-sm font-bold text-masters-yellow leading-none">{score}</span>
+      </span>
+    );
+  }
+
+  if (diff >= 2) {
+    // Double bogey+: two concentric squares, colored number
+    return (
+      <span className="relative inline-flex items-center justify-center w-8 h-8 border border-black">
+        <span className="absolute border border-black" style={{ inset: '3px' }} />
+        <span className="relative z-10 font-serif text-sm font-bold text-red-600 leading-none">{score}</span>
+      </span>
+    );
+  }
+
+  if (diff === 1) {
+    // Bogey: one square, colored number
+    return (
+      <span className="inline-flex items-center justify-center w-8 h-8 border border-black">
+        <span className="font-serif text-sm font-bold text-red-500 leading-none">{score}</span>
+      </span>
+    );
+  }
+
+  // Par
+  return (
+    <span className="font-serif text-base font-bold text-masters-green leading-none">{score}</span>
+  );
 }
 
 function sum(values: number[]) {
@@ -82,9 +121,7 @@ function Panel({
       <ScorecardRow
         label="Score"
         values={holes.map((hole) => (
-          <span key={hole.holeNumber} className={cn(getScoreClass(hole.score, hole.par), "transition-transform")}>
-            {hole.score}
-          </span>
+          <ScoreCell key={hole.holeNumber} score={hole.score} par={hole.par} />
         ))}
         subtotal={sum(holes.map((hole) => hole.score))}
         variant="score"
@@ -172,7 +209,7 @@ export function TraditionalScorecard({
       />
       <div className="bg-masters-green text-white flex justify-between px-8 py-6 items-baseline font-serif">
         <div className="text-sm uppercase tracking-[0.4em] opacity-60 font-sans">
-          Round {round.roundNumber} Completion
+          Round {round.roundNumber} Total
         </div>
         <div className="flex gap-12 text-5xl font-black">
           <div className="flex flex-col items-center">

@@ -40,9 +40,9 @@ export default function Profile() {
   };
 
   const verdicts = [
-    { title: "Power Blueprint", text: model.profile.verdicts.primarySeparator },
-    { title: "Defensive Mastery", text: model.profile.verdicts.secondarySupport },
-    { title: "The X-Factor", text: model.profile.verdicts.weaknessOvercome },
+    { title: "The Distance Edge", text: model.profile.verdicts.primarySeparator },
+    { title: "Hitting the Green", text: model.profile.verdicts.secondarySupport },
+    { title: "Scrambling the Deficit", text: model.profile.verdicts.weaknessOvercome },
   ];
 
   return (
@@ -72,24 +72,24 @@ export default function Profile() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-20">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-64">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-6 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
-                Technical Analysis
+                Stats & Field Comparison
               </span>
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-tighter text-shadow-premium">
-              The <span className="italic text-masters-yellow">Blueprint</span>
+            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tighter text-shadow-premium">
+              How Rory <span className="italic text-masters-yellow">Measured Up</span>
               <br />
-              for Augusta.
+              to the Field.
             </h1>
-            <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed">
-              Rory’s winning profile, plotted against every player in the 2026 field and the full top-10 cohort including ties.
+            <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed mb-12">
+              Driving distance, greens in regulation, putting, and scoring — Rory's numbers against every player who teed it up at Augusta.
             </p>
           </motion.div>
         </div>
@@ -144,7 +144,7 @@ export default function Profile() {
           </div>
 
           <aside className="lg:col-span-4 space-y-8">
-            <h3 className="font-serif text-2xl font-bold text-masters-green px-2">The Winning Verdict</h3>
+            <h3 className="font-serif text-2xl font-bold text-masters-green px-2">What Separated Him</h3>
             <div className="space-y-6">
               {verdicts.map((verdict, index) => (
                 <motion.div
@@ -171,12 +171,12 @@ export default function Profile() {
             >
               <Trophy className="absolute -bottom-6 -right-6 text-masters-green/5 rotate-[-15deg] group-hover:rotate-0 transition-transform duration-700" size={180} />
               <div className="relative z-10">
-                <h4 className="font-serif text-3xl font-bold mb-4">Confirmed <br />Dominance.</h4>
+                <h4 className="font-serif text-3xl font-bold mb-4">2026 Masters <br />Champion.</h4>
                 <p className="text-[10px] font-black uppercase tracking-widest mb-6 border-b border-masters-green/10 pb-4">
                   Tournament ID: {model.statsMeta.tournamentId ?? "N/A"}
                 </p>
                 <Link to="/" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform">
-                  Return to Scorecard <ArrowRight size={14} />
+                  Back to the Card <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>
