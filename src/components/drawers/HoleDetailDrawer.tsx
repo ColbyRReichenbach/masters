@@ -26,9 +26,9 @@ function comparisonTone(value: number) {
 }
 
 function comparisonNarrative(value: number, target: string) {
-  if (value > 0) return `Rory gained ${value.toFixed(3)} shots versus the ${target} on this hole.`;
-  if (value < 0) return `Rory lost ${Math.abs(value).toFixed(3)} shots versus the ${target} on this hole.`;
-  return `Rory played this hole even with the ${target}.`;
+  if (value > 0) return `Rory scored ${value.toFixed(3)} strokes better than the ${target} on this hole.`;
+  if (value < 0) return `Rory scored ${Math.abs(value).toFixed(3)} strokes worse than the ${target} on this hole.`;
+  return `Rory matched the ${target} average exactly on this hole.`;
 }
 
 function StatLine({
@@ -208,7 +208,7 @@ export function HoleDetailDrawer({
                   <StatLine label="Field Average" helper="Full-field score benchmark" value={hole.fieldAvg?.toFixed(3) ?? "N/A"} />
                   <StatLine
                     label="Differential"
-                    helper="Positive means Rory gained shots"
+                    helper="Positive = scored better than the benchmark"
                     value={formatSigned(comparison.vsField, 3)}
                     tone={comparisonTone(comparison.vsField)}
                   />
@@ -238,7 +238,7 @@ export function HoleDetailDrawer({
                   <StatLine label="Top 10 Average" helper="Contender score benchmark" value={hole.top10Avg?.toFixed(3) ?? "N/A"} />
                   <StatLine
                     label="Differential"
-                    helper="Positive means Rory gained shots"
+                    helper="Positive = scored better than the benchmark"
                     value={formatSigned(comparison.vsTop10, 3)}
                     tone={comparisonTone(comparison.vsTop10)}
                   />

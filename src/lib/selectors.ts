@@ -400,13 +400,13 @@ export function getDerivedWinnerProfile(
     metrics,
     verdicts: {
       primarySeparator: driving
-        ? `He averaged ${formatProfileMetricValue(driving.winnerValue, driving.unit)} per drive against a field average of ${formatProfileMetricValue(driving.fieldValue, driving.unit)}.`
+        ? `At ${formatProfileMetricValue(driving.winnerValue, driving.unit)} per drive — ${formatProfileMetricValue(Math.abs(driving.winnerValue - driving.fieldValue), driving.unit)} longer than the field average — Rory turned Augusta's par 5s and long par 4s into scoring opportunities others couldn't access.`
         : profile.verdicts.primarySeparator,
       secondarySupport: gir
-        ? `He hit ${formatProfileMetricValue(gir.winnerValue, gir.unit)} of greens in regulation against a field average of ${formatProfileMetricValue(gir.fieldValue, gir.unit)}.`
+        ? `Hitting ${formatProfileMetricValue(gir.winnerValue, gir.unit)} of greens in regulation, Rory consistently put himself in two-putt territory — the foundation of avoiding bogeys at Augusta.`
         : profile.verdicts.secondarySupport,
       weaknessOvercome: putts
-        ? `He averaged ${formatProfileMetricValue(putts.winnerValue, putts.unit)} putts per GIR versus a field average of ${formatProfileMetricValue(putts.fieldValue, putts.unit)}.`
+        ? `Despite hitting fairways at well below the field average, Rory converted at ${formatProfileMetricValue(putts.winnerValue, putts.unit)} putts per GIR — better than the field's ${formatProfileMetricValue(putts.fieldValue, putts.unit)} — turning approach play into a net positive.`
         : profile.verdicts.weaknessOvercome,
     },
   };

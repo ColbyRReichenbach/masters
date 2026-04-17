@@ -70,7 +70,7 @@ export function HoleGainLossChart({
       <SectionHeader
         eyebrow="Hole Gain / Loss"
         title="Where the Shots Moved"
-        subtitle={`Each bar sums Rory's scoring differential against the ${benchmark === "field" ? "full field" : "top 10 plus ties"} for the selected scope. Positive means Rory gained shots.`}
+        subtitle={`Each bar shows Rory's scoring differential versus the ${benchmark === "field" ? "full field" : "top 10 plus ties"} average for the selected scope. Positive means he scored better than the benchmark on that hole.`}
         actions={
           <div className="flex flex-wrap gap-3">
             <BenchmarkToggle
