@@ -9,10 +9,10 @@ export default function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <footer className="bg-green-900 text-white py-12 px-4 md:px-6 lg:px-8 mt-24">
+      <footer className="bg-green-900 text-white py-10 md:py-12 px-4 md:px-6 lg:px-8 mt-16 md:mt-24">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div>
-            <div className="font-serif text-2xl font-semibold !text-white">
+          <div className="text-center md:text-left">
+            <div className="font-serif text-xl md:text-2xl font-semibold !text-white">
               How the 2026 Masters Was Won
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center md:justify-start gap-3">

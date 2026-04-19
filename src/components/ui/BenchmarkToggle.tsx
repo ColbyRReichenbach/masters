@@ -17,13 +17,13 @@ export function BenchmarkToggle<T extends string | number>({
   const idleClass = tone === "gold" ? "text-augusta-gold hover:bg-augusta-gold/10" : "text-masters-green/55 hover:text-masters-green hover:bg-masters-green/10";
 
   return (
-    <div className="inline-flex w-fit max-w-full flex-nowrap gap-1 overflow-x-auto bg-white/70 p-1 rounded-2xl border border-masters-green/10 font-sans shadow-inner">
+    <div className="flex w-full max-w-full flex-wrap gap-1 overflow-visible bg-white/70 p-1 rounded-2xl border border-masters-green/10 font-sans shadow-inner sm:inline-flex sm:w-fit sm:flex-nowrap sm:overflow-x-auto">
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
           className={cn(
-            "shrink-0 px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all",
+            "shrink-0 px-3 md:px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all",
             value === option.value ? activeClass : idleClass
           )}
         >

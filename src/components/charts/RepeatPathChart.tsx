@@ -81,7 +81,7 @@ export function RepeatPathChart({ data, zoom, onZoomChange, onSelectHole }: Repe
   };
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Repeat Path"
         title="Two Title Runs, Same Route"
@@ -98,8 +98,9 @@ export function RepeatPathChart({ data, zoom, onZoomChange, onSelectHole }: Repe
           />
         }
       />
-      <div className="h-[430px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full overflow-x-auto pb-2">
+        <div className="h-[320px] md:h-[430px] min-w-[560px] md:min-w-0">
+          <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={visibleData}
             margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
@@ -184,9 +185,10 @@ export function RepeatPathChart({ data, zoom, onZoomChange, onSelectHole }: Repe
               dot={renderClickableDot}
             />
           </AreaChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
-      <div className="mt-8 flex flex-wrap gap-6">
+      <div className="mt-6 md:mt-8 flex flex-wrap gap-6">
         <div className="flex items-center gap-2">
           <span className="w-8 h-0.5 border-t-2 border-dashed border-augusta-gold" />
           <span className="text-[10px] font-black uppercase tracking-widest text-ink-400">2025</span>

@@ -23,14 +23,14 @@ export function RepeatChampionBenchmarkChart({
   onSelectChampion,
 }: RepeatChampionBenchmarkChartProps) {
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Historical Benchmarks"
         title="The Defender Ladder"
         subtitle="All four successful Masters title defenses, shown by first-win score and repeat-year score. Summary-only rows remain useful even without historical hole-by-hole scorecards."
       />
 
-      <div className="space-y-5">
+      <div className="space-y-4 md:space-y-5">
         {rows.map((row) => {
           const firstX = scoreX(row.firstWin.scoreToPar);
           const repeatX = scoreX(row.repeatWin.scoreToPar);
@@ -43,7 +43,7 @@ export function RepeatChampionBenchmarkChart({
               onClick={() => onSelectChampion(row.championKey)}
               title={`${row.playerName}: repeat year ${row.repeatYear}, ${formatToPar(row.repeatWin.scoreToPar)}, margin ${row.repeatWin.winningMargin}, best round ${row.bestRound}, worst round ${row.worstRound}`}
               className={cn(
-                "w-full rounded-[32px] border p-6 text-left transition-all",
+                "w-full rounded-2xl md:rounded-[32px] border p-4 md:p-6 text-left transition-all",
                 isSelected ? "border-masters-green bg-masters-green text-white shadow-premium" : "border-masters-green/10 bg-bg-cream-dark/50 hover:bg-white",
                 isRory && !isSelected && "border-masters-green/30"
               )}
@@ -75,7 +75,7 @@ export function RepeatChampionBenchmarkChart({
                     style={{ left: `${repeatX}%` }}
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4 text-right">
+                <div className="grid grid-cols-2 gap-4 text-left lg:text-right">
                   <div>
                     <span className={cn("text-[9px] font-black uppercase tracking-widest block", isSelected ? "text-white/45" : "text-ink-400")}>
                       {row.firstYear}

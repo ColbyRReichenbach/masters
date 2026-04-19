@@ -21,14 +21,14 @@ export function MetricKpiCard({
   const key = metric.key as PlayerMetricKey;
 
   return (
-    <div className="bg-white rounded-[32px] p-7 border border-masters-green/10 shadow-sm">
-      <div className="flex justify-end mb-7">
+    <div className="bg-white rounded-2xl md:rounded-[32px] p-5 md:p-7 border border-masters-green/10 shadow-sm">
+      <div className="flex justify-end mb-5 md:mb-7">
         <div className="text-right">
           <span className="text-[9px] font-black uppercase tracking-[0.28em] text-masters-green/35 block mb-1">
             Rank
           </span>
           <span className={cn(
-            "font-serif text-4xl font-black leading-none",
+            "font-serif text-3xl md:text-4xl font-black leading-none",
             rank === 1 ? "text-masters-yellow" : "text-masters-green"
           )}>
             {rank ?? "N/A"}
@@ -39,8 +39,8 @@ export function MetricKpiCard({
       <span className="text-[10px] font-black uppercase tracking-[0.22em] text-ink-400 block mb-2">
         {metric.label}
       </span>
-      <div className="flex items-end gap-2 mb-6">
-        <span className="text-4xl font-serif font-black text-masters-green">
+      <div className="flex items-end gap-2 mb-5 md:mb-6">
+        <span className="text-3xl md:text-4xl font-serif font-black text-masters-green">
           {formatMetricValue(value, key, true)}
         </span>
         {metric.unit !== "count" && metric.unit !== "toPar" && (
@@ -50,7 +50,7 @@ export function MetricKpiCard({
         )}
       </div>
 
-      <div className="space-y-3 border-t border-masters-green/10 pt-5">
+      <div className="space-y-3 border-t border-masters-green/10 pt-4 md:pt-5">
         <div className="flex justify-between gap-4 text-[10px] font-black uppercase tracking-widest">
           <span className="text-ink-400">Field Avg</span>
           <span className="text-masters-green">{formatMetricValue(fieldAverage, key)}</span>

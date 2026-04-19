@@ -48,7 +48,7 @@ export function HoleDeltaMatrix({
   }));
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Hole Delta Matrix"
         title="2026 Minus 2025"
@@ -57,7 +57,7 @@ export function HoleDeltaMatrix({
       />
 
       <div className="overflow-x-auto">
-        <div className="min-w-[680px]">
+        <div className="min-w-[620px] md:min-w-[680px]">
           <div className="grid grid-cols-[120px_repeat(4,1fr)] gap-2 mb-3">
             <div />
             {[1, 2, 3, 4].map((round) => (
@@ -107,4 +107,3 @@ export function HoleDeltaMatrix({
     </section>
   );
 }
-

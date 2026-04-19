@@ -31,7 +31,7 @@ export function ScorecardRow({
         isDelta && "bg-bg-cream-dark/70 text-masters-green font-black"
       )}
     >
-      <div className="pl-4 text-[10px] uppercase tracking-widest font-black opacity-60">
+      <div className="pl-3 md:pl-4 text-[9px] md:text-[10px] uppercase tracking-widest font-black opacity-60">
         {label}
       </div>
       {values.map((value, index) => {
@@ -43,7 +43,7 @@ export function ScorecardRow({
             disabled={!onSelectHole || !holeNumber}
             onClick={() => holeNumber && onSelectHole?.(holeNumber)}
             className={cn(
-              "min-h-9 text-center font-serif text-lg transition-transform flex items-center justify-center",
+              "min-h-9 text-center font-serif text-base md:text-lg transition-transform flex items-center justify-center",
               onSelectHole && "cursor-pointer hover:scale-110",
               !onSelectHole && "cursor-default",
               isBenchmark && "text-masters-green/70 hover:text-masters-green",
@@ -60,4 +60,3 @@ export function ScorecardRow({
     </div>
   );
 }
-

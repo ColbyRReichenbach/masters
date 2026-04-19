@@ -121,7 +121,9 @@ function Panel({
       <ScorecardRow
         label="Score"
         values={holes.map((hole) => (
-          <ScoreCell key={hole.holeNumber} score={hole.score} par={hole.par} />
+          <span key={hole.holeNumber}>
+            <ScoreCell score={hole.score} par={hole.par} />
+          </span>
         ))}
         subtotal={sum(holes.map((hole) => hole.score))}
         variant="score"
@@ -191,27 +193,29 @@ export function TraditionalScorecard({
 
   return (
     <div className="bg-white border-2 border-masters-green/20 rounded-xl overflow-hidden shadow-sm">
-      <Panel
-        label="OUT"
-        holes={outHoles}
-        round={round}
-        showFieldAvg={showFieldAvg}
-        showTop10Avg={showTop10Avg}
-        onSelectHole={onSelectHole}
-      />
-      <Panel
-        label="IN"
-        holes={inHoles}
-        round={round}
-        showFieldAvg={showFieldAvg}
-        showTop10Avg={showTop10Avg}
-        onSelectHole={onSelectHole}
-      />
-      <div className="bg-masters-green text-white flex justify-between px-8 py-6 items-baseline font-serif">
-        <div className="text-sm uppercase tracking-[0.4em] opacity-60 font-sans">
+      <div className="overflow-x-auto">
+        <Panel
+          label="OUT"
+          holes={outHoles}
+          round={round}
+          showFieldAvg={showFieldAvg}
+          showTop10Avg={showTop10Avg}
+          onSelectHole={onSelectHole}
+        />
+        <Panel
+          label="IN"
+          holes={inHoles}
+          round={round}
+          showFieldAvg={showFieldAvg}
+          showTop10Avg={showTop10Avg}
+          onSelectHole={onSelectHole}
+        />
+      </div>
+      <div className="bg-masters-green text-white flex flex-col sm:flex-row sm:justify-between gap-5 px-4 md:px-8 py-5 md:py-6 sm:items-baseline font-serif">
+        <div className="text-xs md:text-sm uppercase tracking-[0.28em] md:tracking-[0.4em] opacity-60 font-sans">
           Round {round.roundNumber} Total
         </div>
-        <div className="flex gap-12 text-5xl font-black">
+        <div className="flex gap-8 md:gap-12 text-4xl md:text-5xl font-black">
           <div className="flex flex-col items-center">
             <span className="text-[10px] uppercase font-sans tracking-widest opacity-60 mb-1">
               Total
@@ -232,4 +236,3 @@ export function TraditionalScorecard({
     </div>
   );
 }
-

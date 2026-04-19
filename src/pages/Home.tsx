@@ -29,7 +29,7 @@ export default function Home() {
         onClose={model.closeHoleDrawer}
       />
 
-      <section className="relative w-full h-screen overflow-hidden bg-masters-green">
+      <section className="relative w-full min-h-[calc(100svh-72px)] md:h-screen overflow-hidden bg-masters-green">
         <div className="absolute inset-0">
           <img
             src="/masters-main.png"
@@ -39,30 +39,30 @@ export default function Home() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-24">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 min-h-[calc(100svh-72px)] md:h-full flex flex-col justify-end py-16 md:py-0 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
+            <div className="inline-flex max-w-full items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-6 md:mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
                 2025 & 2026 Masters Champion
               </span>
             </div>
 
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-8 leading-[0.9] tracking-tighter text-shadow-premium">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-6 md:mb-8 leading-[0.95] md:leading-[0.9] tracking-tighter text-shadow-premium">
               The <span className="italic text-masters-yellow">72-Hole</span>
               <br />
               Scorecard.
             </h1>
 
-            <p className="font-sans text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
+            <p className="font-sans text-base sm:text-lg md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-8 md:mb-12">
               Every hole of Rory's 2026 Masters — scored against the full field
               and the top-10 contenders. Click any hole to drill in.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 max-w-3xl">
               {[
                 {
                   label: "Total Score",
@@ -76,11 +76,11 @@ export default function Home() {
                   sub: "R1 · R2 · R3 · R4",
                 },
               ].map((stat) => (
-                <div key={stat.label} className="glass-dark p-6 rounded-2xl">
+                <div key={stat.label} className="glass-dark p-4 md:p-6 rounded-2xl">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 block mb-2">
                     {stat.label}
                   </span>
-                  <div className="text-3xl font-serif font-bold text-white mb-1">
+                  <div className="text-2xl md:text-3xl font-serif font-bold text-white mb-1">
                     {stat.value}
                   </div>
                   <div className="text-[10px] font-medium text-masters-yellow uppercase tracking-widest">
@@ -93,12 +93,12 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-20 relative z-20 space-y-16">
+      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-8 md:-mt-20 relative z-20 space-y-10 md:space-y-16">
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass rounded-[48px] p-8 md:p-14"
+          className="glass rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14"
         >
           <SectionHeader
             eyebrow="Official Scorecard"
@@ -107,7 +107,7 @@ export default function Home() {
             icon={<Trophy size={32} className="text-augusta-gold" />}
             actions={
               <>
-                <div className="flex bg-augusta-gold/5 p-1 rounded-2xl border border-augusta-gold/10 mr-4 font-sans">
+                <div className="flex bg-augusta-gold/5 p-1 rounded-2xl border border-augusta-gold/10 md:mr-4 font-sans">
                   <button
                     type="button"
                     onClick={() => model.setShowFieldAvg(!model.showFieldAvg)}
@@ -171,7 +171,7 @@ export default function Home() {
           </motion.div>
 
           <aside className="lg:col-span-4 space-y-8 text-masters-green">
-            <div className="bg-white rounded-[32px] p-10 border border-masters-green/10">
+            <div className="bg-white rounded-2xl md:rounded-[32px] p-6 md:p-10 border border-masters-green/10">
               <h4 className="font-serif text-2xl font-bold mb-8 italic">By the Numbers.</h4>
               <div className="space-y-10">
                 {model.profile.metrics.slice(0, 3).map((metric) => (
@@ -202,7 +202,7 @@ export default function Home() {
 
             <Link
               to="/the-repeat"
-              className="bg-bg-cream-dark rounded-[32px] p-10 border border-masters-green/10 relative overflow-hidden group cursor-pointer block hover:bg-white transition-all shadow-sm"
+              className="bg-bg-cream-dark rounded-2xl md:rounded-[32px] p-6 md:p-10 border border-masters-green/10 relative overflow-hidden group cursor-pointer block hover:bg-white transition-all shadow-sm"
             >
               <BarChart3 className="absolute -bottom-8 -right-8 text-masters-green/5 group-hover:rotate-6 transition-transform duration-700" size={170} />
               <div className="relative z-10">
@@ -244,4 +244,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -15,7 +15,7 @@ export default function TheRepeat() {
 
   return (
     <div className="w-full pb-32">
-      <section className="relative w-full h-screen overflow-hidden bg-masters-green">
+      <section className="relative w-full min-h-[calc(100svh-72px)] md:h-screen overflow-hidden bg-masters-green">
         <div className="absolute inset-0">
           <img
             src="/rory-jacket.png"
@@ -25,27 +25,27 @@ export default function TheRepeat() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-24">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 min-h-[calc(100svh-72px)] md:h-full flex flex-col justify-end py-16 md:py-0 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
+            <div className="inline-flex max-w-full items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-6 md:mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
                 Back-to-Back · Augusta National
               </span>
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-8 leading-[0.9] tracking-tighter text-shadow-premium">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-[100px] font-bold text-white mb-6 md:mb-8 leading-[0.95] md:leading-[0.9] tracking-tighter text-shadow-premium">
               The <span className="italic text-masters-yellow">Defense.</span>
               <br />
               Only Four Times Ever.
             </h1>
-            <p className="font-sans text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-12">
+            <p className="font-sans text-base sm:text-lg md:text-2xl text-white/90 max-w-3xl leading-relaxed mb-8 md:mb-12">
               Only Nicklaus, Faldo, and Woods had done it before. Compare Rory's 2025 breakthrough and 2026 defense hole by hole, round by round.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 max-w-4xl">
               {[
                 { label: "Ever Done It", value: `${model.repeatContext.repeatSetSize}`, sub: "Back-to-back champions" },
                 {
@@ -59,11 +59,11 @@ export default function TheRepeat() {
                   sub: `${model.scorecard2026.player.totalStrokes} strokes`,
                 },
               ].map((stat) => (
-                <div key={stat.label} className="glass-dark p-6 rounded-2xl">
+                <div key={stat.label} className="glass-dark p-4 md:p-6 rounded-2xl">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 block mb-2">
                     {stat.label}
                   </span>
-                  <div className="text-3xl font-serif font-bold text-white mb-1">
+                  <div className="text-2xl md:text-3xl font-serif font-bold text-white mb-1">
                     {stat.value}
                   </div>
                   <div className="text-[10px] font-medium text-masters-yellow uppercase tracking-widest">
@@ -76,7 +76,7 @@ export default function TheRepeat() {
         </div>
       </section>
 
-      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-20 relative z-20 space-y-16">
+      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-8 md:-mt-20 relative z-20 space-y-10 md:space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -97,7 +97,7 @@ export default function TheRepeat() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-masters-green rounded-[32px] p-10 text-white shadow-2xl relative overflow-hidden"
+              className="bg-masters-green rounded-2xl md:rounded-[32px] p-6 md:p-10 text-white shadow-2xl relative overflow-hidden"
             >
               <Trophy className="absolute -bottom-8 -right-8 text-white/5 rotate-[-12deg]" size={190} />
               <div className="relative z-10">
@@ -121,7 +121,7 @@ export default function TheRepeat() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-white border border-masters-green/10 p-8 rounded-[32px] shadow-sm"
+              className="bg-white border border-masters-green/10 p-6 md:p-8 rounded-2xl md:rounded-[32px] shadow-sm"
             >
               <span className="text-[10px] font-black uppercase tracking-[0.25em] text-masters-green/40 block mb-3">
                 Selected Hole
@@ -198,7 +198,7 @@ export default function TheRepeat() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[32px] border border-masters-green/10 p-10 sticky top-28"
+              className="bg-white rounded-2xl md:rounded-[32px] border border-masters-green/10 p-6 md:p-10 sticky top-28"
             >
               <span className="text-[10px] font-black uppercase tracking-[0.25em] text-masters-green/40 block mb-3">
                 Champion Detail

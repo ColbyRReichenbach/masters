@@ -86,13 +86,13 @@ export function MetricDistributionChart({
   };
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Field Distribution"
         title="Metric Distribution"
         subtitle={`Histogram of ${config.label.toLowerCase()} across the selected cohort. Vertical markers anchor Rory, the field average, top-10 plus ties, and the selected comparison player.`}
         actions={
-          <div className="flex flex-wrap items-end gap-3">
+          <div className="flex min-w-0 flex-wrap items-end gap-3">
             <BenchmarkToggle
               value={metric}
               onChange={onMetricChange}
@@ -103,8 +103,9 @@ export function MetricDistributionChart({
         }
       />
 
-      <div className="h-[360px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full overflow-x-auto pb-2">
+        <div className="h-[320px] md:h-[360px] min-w-[560px] md:min-w-0">
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
             margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
@@ -202,10 +203,11 @@ export function MetricDistributionChart({
               ))}
             </Bar>
           </BarChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-end gap-6">
+      <div className="mt-6 md:mt-8 flex flex-wrap items-end gap-4 md:gap-6">
         <PlayerSearchSelect players={players} value={selectedPlayerSlug} onChange={onSelectPlayer} />
         {[
           ["Rory", roryValue, "bg-masters-green"],

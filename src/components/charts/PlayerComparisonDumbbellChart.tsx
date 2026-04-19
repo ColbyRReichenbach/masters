@@ -46,7 +46,7 @@ export function PlayerComparisonDumbbellChart({
   onSelectMetric,
 }: PlayerComparisonDumbbellChartProps) {
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Player Matchup"
         title="Rory vs Selected Player"
@@ -54,7 +54,7 @@ export function PlayerComparisonDumbbellChart({
         actions={<PlayerSearchSelect players={players} value={selectedPlayerSlug} onChange={onSelectPlayer} compact />}
       />
 
-      <div className="space-y-5">
+      <div className="space-y-4 md:space-y-5">
         {rows.map((key) => {
           const config = PLAYER_METRICS[key];
           const roryValue = getMetricValue(rory, key);
@@ -80,7 +80,7 @@ export function PlayerComparisonDumbbellChart({
               type="button"
               onClick={() => onSelectMetric(key)}
               title={`${config.label}: ${config.directionality === "higher_better" ? "higher is better" : "lower is better"}`}
-              className="w-full text-left rounded-3xl border border-masters-green/10 bg-bg-cream-dark/60 p-5 hover:bg-white transition-colors group"
+              className="w-full text-left rounded-2xl md:rounded-3xl border border-masters-green/10 bg-bg-cream-dark/60 p-4 md:p-5 hover:bg-white transition-colors group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr_150px] gap-5 items-center">
                 <div>
@@ -121,7 +121,7 @@ export function PlayerComparisonDumbbellChart({
                     />
                   )}
                 </div>
-                <div className="grid grid-cols-2 gap-3 text-right">
+                <div className="grid grid-cols-2 gap-3 text-left lg:text-right">
                   <div>
                     <span className="text-[9px] font-black uppercase tracking-widest text-ink-400 block">Rory</span>
                     <span className="font-serif text-xl font-black text-masters-green">{formatMetricValue(roryValue, key)}</span>

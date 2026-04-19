@@ -34,6 +34,11 @@
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     font-family: var(--font-sans);
     background-color: var(--bg-cream);
@@ -96,7 +101,15 @@
 
   .grid-scorecard {
     display: grid;
-    grid-template-columns: 120px repeat(9, minmax(0, 1fr)) 80px;
+    grid-template-columns: 92px repeat(9, minmax(44px, 1fr)) 64px;
+    min-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    .grid-scorecard {
+      grid-template-columns: 120px repeat(9, minmax(0, 1fr)) 80px;
+      min-width: 0;
+    }
   }
 }
 

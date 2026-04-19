@@ -98,7 +98,7 @@ export function RoundSwingStoryChart({
   };
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Round Swing Story"
         title="How the Defense Differed"
@@ -110,18 +110,18 @@ export function RoundSwingStoryChart({
           <article
             key={round.roundNumber}
             className={cn(
-              "rounded-[32px] border p-7 transition-colors",
+              "rounded-2xl md:rounded-[32px] border p-4 md:p-7 transition-colors",
               round.netDelta < 0 && "bg-masters-green/5 border-masters-green/20",
               round.netDelta > 0 && "bg-under-par/5 border-under-par/20",
               round.netDelta === 0 && "bg-bg-cream-dark/60 border-masters-green/10"
             )}
           >
-            <div className="flex items-start justify-between gap-5 mb-7">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 md:gap-5 mb-6 md:mb-7">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-[0.28em] text-masters-green/40 block mb-2">
                   Round {round.roundNumber}
                 </span>
-                <h3 className="font-serif text-3xl font-black text-masters-green">
+                <h3 className="font-serif text-2xl md:text-3xl font-black text-masters-green">
                   {roundVerdict(round.netDelta)}
                 </h3>
               </div>
@@ -129,31 +129,31 @@ export function RoundSwingStoryChart({
                 <span className="text-[9px] font-black uppercase tracking-[0.24em] text-ink-400 block mb-1">
                   Net Swing
                 </span>
-                <span className={cn("font-serif text-5xl font-black leading-none", deltaTextTone(round.netDelta))}>
+                <span className={cn("font-serif text-4xl md:text-5xl font-black leading-none", deltaTextTone(round.netDelta))}>
                   {formatSigned(round.netDelta, 0)}
                 </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 mb-7">
+            <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6 md:mb-7">
               {[
                 ["2025", round.score2025],
                 ["2026", round.score2026],
                 ["Changed", round.changedHoles],
               ].map(([label, value]) => (
-                <div key={label} className="rounded-2xl border border-masters-green/10 bg-white/75 p-4">
+                <div key={label} className="rounded-2xl border border-masters-green/10 bg-white/75 p-3 md:p-4">
                   <span className="text-[9px] font-black uppercase tracking-widest text-ink-400 block mb-1">
                     {label}
                   </span>
-                  <span className="font-serif text-2xl font-black text-masters-green">
+                  <span className="font-serif text-xl md:text-2xl font-black text-masters-green">
                     {value}
                   </span>
                 </div>
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mb-7">
-              <div className="rounded-2xl border border-masters-green/10 bg-white/75 p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 md:mb-7">
+              <div className="rounded-2xl border border-masters-green/10 bg-white/75 p-3 md:p-4">
                 <span className="text-[9px] font-black uppercase tracking-widest text-ink-400 block mb-1">
                   Best Swing
                 </span>
@@ -161,7 +161,7 @@ export function RoundSwingStoryChart({
                   {formatHoleSwing(round.bestSwing, "Even")}
                 </span>
               </div>
-              <div className="rounded-2xl border border-masters-green/10 bg-white/75 p-4">
+              <div className="rounded-2xl border border-masters-green/10 bg-white/75 p-3 md:p-4">
                 <span className="text-[9px] font-black uppercase tracking-widest text-ink-400 block mb-1">
                   Worst Swing
                 </span>
@@ -172,7 +172,7 @@ export function RoundSwingStoryChart({
             </div>
 
             <div
-              className="grid gap-1"
+              className="grid gap-1 overflow-x-auto pb-1"
               style={{ gridTemplateColumns: "repeat(18, minmax(0, 1fr))" }}
               onMouseLeave={() => setTooltip(null)}
             >
@@ -194,7 +194,7 @@ export function RoundSwingStoryChart({
                     onBlur={() => setTooltip(null)}
                     onClick={() => onSelectCell(cell)}
                     className={cn(
-                      "h-12 rounded-xl border text-[9px] font-black transition-all hover:-translate-y-0.5",
+                      "h-10 min-w-7 md:h-12 md:min-w-0 rounded-xl border text-[9px] font-black transition-all hover:-translate-y-0.5",
                       deltaTone(cell.delta),
                       isSelected && "ring-4 ring-masters-yellow/70"
                     )}

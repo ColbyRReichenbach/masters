@@ -11,14 +11,14 @@ interface AxisMetricSelectProps {
 
 export function AxisMetricSelect({ label, value, onChange, disabledMetric }: AxisMetricSelectProps) {
   return (
-    <label className="flex flex-col gap-2">
+    <label className="flex min-w-[180px] flex-1 flex-col gap-2 sm:flex-none">
       <span className="text-[9px] font-black uppercase tracking-[0.24em] text-masters-green/40">
         {label}
       </span>
       <select
         value={value}
         onChange={(event) => onChange(event.target.value as PlayerMetricKey)}
-        className="h-11 rounded-xl border border-masters-green/10 bg-white px-4 text-xs font-bold uppercase tracking-widest text-masters-green outline-none transition focus:border-masters-green/40"
+        className="h-11 w-full rounded-xl border border-masters-green/10 bg-white px-4 text-xs font-bold uppercase tracking-widest text-masters-green outline-none transition focus:border-masters-green/40"
       >
         {METRIC_OPTIONS.map((metric) => (
           <option key={metric.key} value={metric.key} disabled={metric.key === disabledMetric}>
@@ -29,4 +29,3 @@ export function AxisMetricSelect({ label, value, onChange, disabledMetric }: Axi
     </label>
   );
 }
-

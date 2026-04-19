@@ -67,13 +67,13 @@ export function ArchetypeScatterChart({
   };
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Player Archetypes"
         title="Shape of the Field"
         subtitle={`Scatter view for ${cohort === "all" ? "all players" : "the top 10 plus ties"}. Rory stays labeled, and field-average reference lines give the plot its benchmark context.`}
         actions={
-          <div className="flex flex-wrap gap-3">
+          <div className="flex min-w-0 flex-wrap gap-3">
             <AxisMetricSelect label="X Axis" value={xMetric} onChange={onXMetricChange} disabledMetric={yMetric} />
             <AxisMetricSelect label="Y Axis" value={yMetric} onChange={onYMetricChange} disabledMetric={xMetric} />
             <PlayerSearchSelect players={allPlayers} value={selectedPlayerSlug} onChange={onSelectPlayer} compact />
@@ -81,8 +81,9 @@ export function ArchetypeScatterChart({
         }
       />
 
-      <div className="h-[430px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full overflow-x-auto pb-2">
+        <div className="h-[340px] md:h-[430px] min-w-[620px] md:min-w-0">
+          <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 25, right: 35, left: 0, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#00462118" />
             <XAxis
@@ -183,7 +184,8 @@ export function ArchetypeScatterChart({
               }}
             />
           </ScatterChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
     </section>
   );

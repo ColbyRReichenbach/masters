@@ -103,14 +103,14 @@ export function ScoringProfileStrip({
   onSelectPlayer,
 }: ScoringProfileStripProps) {
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Scoring Profile"
         title="How Scores Were Made"
         subtitle="Four scoring categories, normalized to 100% for each row so Rory, the selected player, the field, and top-10 plus ties can be compared directly."
         actions={<PlayerSearchSelect players={players} value={selectedPlayerSlug} onChange={onSelectPlayer} compact />}
       />
-      <div className="space-y-7">
+      <div className="space-y-6 md:space-y-7">
         <Row label="Rory McIlroy" profile={rory} />
         {selectedPlayer && <Row label={selectedPlayerName} profile={selectedPlayer} />}
         <Row label="Field Average" profile={field} />

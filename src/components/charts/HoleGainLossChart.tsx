@@ -66,13 +66,13 @@ export function HoleGainLossChart({
   const focus = benchmark === "field" ? "vsField" : "vsTop10";
 
   return (
-    <section className="bg-white rounded-[48px] p-10 md:p-14 border border-masters-green/10">
+    <section className="bg-white rounded-2xl sm:rounded-[32px] md:rounded-[48px] p-4 sm:p-6 md:p-14 border border-masters-green/10">
       <SectionHeader
         eyebrow="Hole Gain / Loss"
         title="Where the Shots Moved"
         subtitle={`Each bar shows Rory's scoring differential versus the ${benchmark === "field" ? "full field" : "top 10 plus ties"} average for the selected scope. Positive means he scored better than the benchmark on that hole.`}
         actions={
-          <div className="flex flex-wrap gap-3">
+          <div className="flex min-w-0 flex-wrap gap-3">
             <BenchmarkToggle
               value={benchmark}
               onChange={onBenchmarkChange}
@@ -88,8 +88,9 @@ export function HoleGainLossChart({
         }
       />
 
-      <div className="h-[340px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full overflow-x-auto pb-2">
+        <div className="h-[320px] md:h-[340px] min-w-[620px] md:min-w-0">
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#00462118" />
             <XAxis
@@ -152,10 +153,11 @@ export function HoleGainLossChart({
               ))}
             </Bar>
           </BarChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-8">
         {[
           { label: "Biggest Gain", item: biggestGain, tone: "text-masters-green" },
           { label: "Biggest Loss", item: biggestLoss, tone: "text-under-par" },
@@ -164,13 +166,13 @@ export function HoleGainLossChart({
             key={label}
             type="button"
             onClick={() => item && onSelectHole(item.holeNumber, focus)}
-            className="text-left bg-bg-cream-dark rounded-3xl border border-masters-green/10 p-6 hover:bg-white transition-colors"
+            className="text-left bg-bg-cream-dark rounded-2xl md:rounded-3xl border border-masters-green/10 p-4 md:p-6 hover:bg-white transition-colors"
           >
             <span className="text-[10px] font-black uppercase tracking-[0.25em] text-ink-400 block mb-2">
               {label}
             </span>
             <div className="flex items-end justify-between gap-4">
-              <span className="font-serif text-2xl font-black text-masters-green">
+              <span className="font-serif text-xl md:text-2xl font-black text-masters-green">
                 {item?.holeName ?? "N/A"}
                 {item && (
                   <span className="ml-2 align-middle font-sans text-[10px] font-black uppercase tracking-[0.22em] text-masters-green/45">
@@ -178,7 +180,7 @@ export function HoleGainLossChart({
                   </span>
                 )}
               </span>
-              <span className={`font-serif text-3xl font-black ${tone}`}>
+              <span className={`font-serif text-2xl md:text-3xl font-black ${tone}`}>
                 {item ? formatSigned(item.totalGainLoss, 2) : "N/A"}
               </span>
             </div>

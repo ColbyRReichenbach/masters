@@ -18,7 +18,7 @@ export function SectionHeader({
   inverse = false,
 }: SectionHeaderProps) {
   return (
-    <div className="flex flex-col justify-between items-start gap-8 mb-10">
+    <div className="flex flex-col justify-between items-start gap-6 md:gap-8 mb-8 md:mb-10">
       <div className="max-w-3xl">
         {eyebrow && (
           <span
@@ -30,7 +30,7 @@ export function SectionHeader({
           </span>
         )}
         <h2
-          className={`text-4xl md:text-5xl font-serif font-bold mb-4 flex items-center gap-4 ${
+          className={`text-3xl md:text-5xl font-serif font-bold mb-4 flex items-center gap-3 md:gap-4 ${
             inverse ? "!text-white" : "text-masters-green"
           }`}
         >

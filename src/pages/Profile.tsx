@@ -62,7 +62,7 @@ export default function Profile() {
         onClose={() => setIsPlayerDrawerOpen(false)}
       />
 
-      <section className="relative w-full h-screen overflow-hidden bg-masters-green">
+      <section className="relative w-full min-h-[calc(100svh-72px)] md:h-screen overflow-hidden bg-masters-green">
         <div className="absolute inset-0">
           <img
             src="/rory-scoreboard.png"
@@ -72,30 +72,30 @@ export default function Profile() {
           <div className="absolute inset-0 hero-vignette" />
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 h-full flex flex-col justify-end pb-64">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 min-h-[calc(100svh-72px)] md:h-full flex flex-col justify-end py-16 md:py-0 md:pb-64">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-md">
+            <div className="inline-flex max-w-full items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full mb-6 md:mb-8 backdrop-blur-md">
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
                 Stats & Field Comparison
               </span>
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tighter text-shadow-premium">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-6 md:mb-8 leading-[1.02] md:leading-tight tracking-tighter text-shadow-premium">
               How Rory <span className="italic text-masters-yellow">Measured Up</span>
               <br />
               to the Field.
             </h1>
-            <p className="font-sans text-xl text-white/90 max-w-2xl leading-relaxed mb-12">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed mb-8 md:mb-12">
               Driving distance, greens in regulation, putting, and scoring — Rory's numbers against every player who teed it up at Augusta.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-20 relative z-20 space-y-12">
+      <main className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 -mt-8 md:-mt-20 relative z-20 space-y-10 md:space-y-12">
         <motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ export default function Profile() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + index * 0.1 }}
-                  className="bg-white rounded-[32px] p-8 shadow-premium border border-line-subtle group hover:border-masters-green transition-colors"
+                  className="bg-white rounded-2xl md:rounded-[32px] p-6 md:p-8 shadow-premium border border-line-subtle group hover:border-masters-green transition-colors"
                 >
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-ink-400 block mb-6">
                     {verdict.title}
@@ -167,7 +167,7 @@ export default function Profile() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="bg-masters-yellow rounded-[32px] p-10 text-masters-green shadow-premium relative overflow-hidden group cursor-pointer"
+              className="bg-masters-yellow rounded-2xl md:rounded-[32px] p-6 md:p-10 text-masters-green shadow-premium relative overflow-hidden group cursor-pointer"
             >
               <Trophy className="absolute -bottom-6 -right-6 text-masters-green/5 rotate-[-15deg] group-hover:rotate-0 transition-transform duration-700" size={180} />
               <div className="relative z-10">
