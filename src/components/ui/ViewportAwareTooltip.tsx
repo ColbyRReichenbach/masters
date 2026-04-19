@@ -70,7 +70,7 @@ export function ViewportAwareTooltip({
   return (
     <div
       ref={ref}
-      className={className}
+      className={`chart-tooltip ${className}`}
       style={{
         maxWidth: `calc(100vw - ${margin * 2}px)`,
         transform: `translate3d(${shift.x}px, ${shift.y}px, 0)`,

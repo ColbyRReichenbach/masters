@@ -165,3 +165,52 @@
   outline: none !important;
   box-shadow: none !important;
 }
+
+@media (max-width: 640px) {
+  .recharts-tooltip-wrapper {
+    bottom: calc(env(safe-area-inset-bottom) + 16px) !important;
+    left: 16px !important;
+    max-width: none !important;
+    pointer-events: none !important;
+    position: fixed !important;
+    right: 16px !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    z-index: 99999 !important;
+  }
+
+  .chart-tooltip {
+    border-radius: 16px !important;
+    max-height: min(42vh, 260px);
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow-y: auto;
+    padding: 12px !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  .chart-tooltip p {
+    display: none !important;
+  }
+
+  .chart-tooltip h4 {
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .chart-tooltip .gap-8 {
+    gap: 16px !important;
+  }
+
+  .chart-tooltip .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 6px !important;
+  }
+
+  .chart-tooltip [class*="border-t"] {
+    margin-top: 8px !important;
+    padding-top: 8px !important;
+  }
+}
